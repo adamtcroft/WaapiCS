@@ -30,3 +30,19 @@ I made a very large attempt to document the code (documentation comes with the r
 For example, in WAAPI a call exists for `ak.wwise.core.getInfo`, but you must write a lot of additional code to make it work.  In WaapiCS, this is simplified to `Dictionary<string,object> results = ak.wwise.core.GetInfo();`
 
 Please refer to the included API documentation for how to use WaapiCS.  Where custom Wwise objects are referenced (such as object types or properties) you will need to refer to the original [Wwise Authoring API reference](https://www.audiokinetic.com/library/edge/?source=SDK&id=waapi__index.html).
+
+In some places you will need to use specific Wwise-related custom values.  These can be found under the `WwiseValues` class, if available, by including `using WaapiCS.CustomValues;` at the top of your code.
+
+## For Programmers
+WaapiCS is built in two layers - WaapiCS and WaapiCS.Communication.
+
+WaapiCS.Communication is the "lower" layer code, intended to communicate directly with Wwise via a packet system.  WaapiCS.Communication houses a "packet" object, which is then passed to Wwise in JSON form, returned back, and deserialized back into C#.
+
+WaapiCS is the "higher" user-facing layer intended to make code writing easier for audio implementers and technical sound designers.  In many cases, it will _not_ be ideal for your studio to use this layer in its current state.  Some of you will want to build custom objects to reflect the Wwwise hierarchy, for example.
+
+I have intentionally separated WaapiCS.Communication and WaapiCS layers so that you can easily customize or completely re-write the user facing layer without causing issues with the layer which directly communicates with Wwise.
+
+Please feel free to make this your own, and contact me with any requests, suggestions, or updates.
+
+## If You Have Trouble
+If you need additional assistance, please get in touch with me via email - me@adamtcroft.com
