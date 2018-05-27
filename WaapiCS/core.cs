@@ -198,7 +198,7 @@ namespace ak
                     }
                     packet.keywordArguments.Add("inclusions", allInclusions);
                     packet.procedure = "ak.wwise.core.soundbank.setInclusions";
-                    packet.callback = new GetInclusionsCallback(packet);
+                    packet.callback = new Callback(packet);
                     connection.Execute(packet);
                     packet.Clear();
                 }
@@ -218,7 +218,7 @@ namespace ak
                 {
                     if (packet.results != null)
                         packet.results.Clear();
-                    packet.keywordArguments.Add("importOperation", importOperation);
+                    packet.keywordArguments.Add("importOperation", importOperation.ToString());
                     packet.keywordArguments.Add("default", defaultValues);
                     packet.keywordArguments.Add("imports", imports);
                     packet.procedure = "ak.wwise.core.audio.import";

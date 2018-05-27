@@ -163,18 +163,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Callbacks\GetAvailableConsolesCallback.cs" />
-    <Compile Include="Callbacks\GetTypesCallback.cs" />
-    <Compile Include="Callbacks\GetPropertyNamesCallback.cs" />
-    <Compile Include="Callbacks\GetInclusionsCallback.cs" />
-    <Compile Include="Callbacks\ObjectCopyMoveCallback.cs" />
-    <Compile Include="Callbacks\ObjectCreateCallback.cs" />
-    <Compile Include="Callbacks\GetCallback.cs" />
-    <Compile Include="Callbacks\GenericCallbacks.cs" />
-    <Compile Include="Callbacks\CommandCallback.cs" />
-    <Compile Include="Callbacks\GetCommandsCallback.cs" />
-    <Compile Include="Callbacks\GetSelectedObjectsCallback.cs" />
-    <Compile Include="Callbacks\GetInfoCallback.cs" />
+    <Compile Include="Callbacks.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="Execute.cs" />
     <Compile Include="Packet.cs" />

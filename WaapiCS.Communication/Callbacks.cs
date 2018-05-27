@@ -63,18 +63,21 @@ namespace WaapiCS.Communication
             }
             else
             {
-                foreach (var key in argumentsKeywords.Keys)
+                _packet.results = new Dictionary<string, object>();
+                foreach (string key in argumentsKeywords.Keys)
                 {
-                    _packet.results = new Dictionary<string, object>();
-                    _packet.results[key] = argumentsKeywords[key.ToString()];
+                    dynamic value = argumentsKeywords[key];
+                    if (value.Type == JTokenType.Array)
+                    {
+                        value = formatter.Deserialize<object>(value);
+                        _packet.results[key] = value;
+                    }
+                    else
+                    {
+                        _packet.results[key] = value.Value;
+                    }
                 }
             }
-
-            // WHAT I'M THINKING RE: CALLBACK
-            // Create a method that figures out what type of JSON object was returned
-            // Depending on the type, deserialize it directly into its native type (ie: integer)
-            // Or, iterate through each key value pair in the JSON and convert it into native C#
-            // This way, there is one callback
 
             // Allow the application to continue
             SetResetEventQueue();

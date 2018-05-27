@@ -26,6 +26,7 @@ namespace ak
                     return subscription.results;
                 }
 
+                //TODO: Check Callback results come in correctly
                 /// <summary>
                 /// Creates the specified node in Wwsise
                 /// </summary>
@@ -38,7 +39,7 @@ namespace ak
                 /// <param name="children">A list of child objects to be created below the new object.</param>
                 /// <returns></returns>
                 public static Dictionary<string, object> Create(string parent, string type, string name,
-                    string onNameConflict = "fail", string platform = null, string notes = null,
+                    WwiseValues.OnNameConflict onNameConflict = WwiseValues.OnNameConflict.fail, string platform = null, string notes = null,
                     string[] children = null)
                 {
 
@@ -47,7 +48,7 @@ namespace ak
                     packet.keywordArguments.Add("parent", parent);
                     packet.keywordArguments.Add("type", type);
                     packet.keywordArguments.Add("name", name);
-                    packet.keywordArguments.Add("onNameConflict", onNameConflict);
+                    packet.keywordArguments.Add("onNameConflict", onNameConflict.ToString());
                     if (platform != null)
                         packet.keywordArguments.Add("platform", platform);
                     if (notes != null)
@@ -55,8 +56,8 @@ namespace ak
                     if (children != null)
                         packet.keywordArguments.Add("children", children);
                     packet.procedure = "ak.wwise.core.object.create";
-                    packet.callback = new ObjectCreateCallback(packet);
-                    connection.Execute(packet);
+                    packet.callback = new Callback(packet);
+                    results = connection.Execute(packet);
                     packet.Clear();
                     return (Dictionary<string, object>)results;
                 }
@@ -77,7 +78,7 @@ namespace ak
                     packet.keywordArguments.Add("parent", parent);
                     packet.keywordArguments.Add("onNameConflict", onNameConflict);
                     packet.procedure = "ak.wwise.core.object.copy";
-                    packet.callback = new ObjectCopyMoveCallback(packet);
+                    packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
                     packet.Clear();
                     return (Dictionary<string, object>)results;
@@ -99,7 +100,7 @@ namespace ak
                     packet.keywordArguments.Add("parent", parent);
                     packet.keywordArguments.Add("onNameConflict", onNameConflict.ToString());
                     packet.procedure = "ak.wwise.core.object.move";
-                    packet.callback = new ObjectCopyMoveCallback(packet);
+                    packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
                     packet.Clear();
 
@@ -110,11 +111,11 @@ namespace ak
                 /// Deletes the specified node.
                 /// </summary>
                 /// <param name="node">The node GUID.</param>
-                public static void Delete(string node)
+                public static void Delete(string nodeID)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
-                    packet.keywordArguments.Add("object", node);
+                    packet.keywordArguments.Add("object", nodeID);
                     packet.procedure = "ak.wwise.core.object.delete";
                     packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
@@ -129,12 +130,13 @@ namespace ak
                 /// <param name="get">The query starting point.</param>
                 /// <param name="transform">Sequential transformations on object list returned by "get".</param>
                 /// <returns></returns>
-                public static Dictionary<string, object> Get(WwiseValues.Get get, WwiseValues.GetTransform transform)
+                public static Dictionary<string, object> Get(WwiseValues.Get get, WwiseValues.GetTransform transform = null)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
                     packet.keywordArguments.Add(get.type.ToString(), get.objectArray);
-                    packet.keywordArguments.Add(transform.type.ToString(), transform.objectArray);
+                    if (transform != null)
+                        packet.keywordArguments.Add(transform.type.ToString(), transform.objectArray);
                     packet.procedure = "ak.wwise.core.object.get";
                     packet.options.@return = returnValues2017_1_0_6302;
                     results = connection.Execute(packet);
@@ -148,9 +150,9 @@ namespace ak
                 /// Retrieves information about an object property.
                 /// </summary>
                 /// <param name="property">The name of the property to retrieve.</param>
-                /// <param name="objectID">The ID (GUID) or path of the object to watch.</param>
+                /// <param name="objectID">The ID (GUID) or path of the object.</param>
                 /// <param name="classID">The ID (class ID) of the object to retrieve the property from.</param>
-                public static void GetPropertyInfo(string property, string objectID = "", int classID = 0)
+                public static Dictionary<string, object> GetPropertyInfo(string property, string objectID = "", int classID = 0)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
@@ -160,8 +162,10 @@ namespace ak
                         packet.keywordArguments.Add("classId", classID);
                     packet.keywordArguments.Add("property", property);
                     packet.procedure = "ak.wwise.core.object.getPropertyInfo";
+                    packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
                     packet.Clear();
+                    return (Dictionary<string, object>)results;
                 }
 
                 //TODO: Create callback
@@ -184,7 +188,7 @@ namespace ak
                     packet.Clear();
                 }
 
-                //TODO: Create callback
+                //!: Currently non-functioning
                 //!: Needs Testing
                 /// <summary>
                 /// Retrieves the status of a property.
@@ -192,7 +196,7 @@ namespace ak
                 /// <param name="objectID">The ID (GUID) or path of the object to check.</param>
                 /// <param name="platformID">The ID (GUID) or path of the platform to link the reference. Set to null-guid for unlinked reference.</param>
                 /// <param name="property">The name of the property.</param>
-                public static void IsPropertyEnabled(string objectID, string platformID, string property)
+                public static Dictionary<string, object> IsPropertyEnabled(string objectID, string platformID, string property)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
@@ -200,8 +204,10 @@ namespace ak
                     packet.keywordArguments.Add("platform", platformID);
                     packet.keywordArguments.Add("property", property);
                     packet.procedure = "ak.wwise.core.object.isPropertyEnabled";
+                    packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
                     packet.Clear();
+                    return (Dictionary<string, object>)results;
                 }
 
                 /// <summary>
@@ -220,7 +226,7 @@ namespace ak
                         packet.keywordArguments.Add("object", node);
                     if (classID != 0)
                         packet.keywordArguments.Add("classId", classID);
-                    packet.callback = new GetProperyNamesCallback(packet);
+                    packet.callback = new Callback(packet);
                     connection.Execute(packet);
                     packet.Clear();
 
@@ -244,7 +250,7 @@ namespace ak
                         packet.results.Clear();
 
                     packet.procedure = "ak.wwise.core.object.getTypes";
-                    packet.callback = new GetTypesCallback(packet);
+                    packet.callback = new Callback(packet);
                     connection.Execute(packet);
                     packet.Clear();
                     return (List<Dictionary<string, object>>)packet.results;
@@ -276,7 +282,6 @@ namespace ak
                     packet.Clear();
                 }
 
-                //!: Needs testing
                 /// <summary>
                 /// Renames an object.
                 /// </summary>
@@ -287,14 +292,13 @@ namespace ak
                     if (packet.results != null)
                         packet.results.Clear();
                     packet.keywordArguments.Add("object", objectID);
-                    packet.keywordArguments.Add("name", name);
+                    packet.keywordArguments.Add("value", name);
                     packet.procedure = "ak.wwise.core.object.setName";
                     packet.callback = new Callback(packet);
                     connection.Execute(packet);
                     packet.Clear();
                 }
 
-                //!: Needs testing
                 /// <summary>
                 /// Sets the object's notes.
                 /// </summary>
@@ -305,7 +309,7 @@ namespace ak
                     if (packet.results != null)
                         packet.results.Clear();
                     packet.keywordArguments.Add("object", objectID);
-                    packet.keywordArguments.Add("notes", notes);
+                    packet.keywordArguments.Add("value", notes);
                     packet.procedure = "ak.wwise.core.object.setNotes";
                     packet.callback = new Callback(packet);
                     connection.Execute(packet);
@@ -319,14 +323,14 @@ namespace ak
                 /// <param name="property">The name of the property.</param>
                 /// <param name="platformID">The ID (GUID) or path of the platform.</param>
                 /// <param name="value">The value of the object.</param>
-                public static void SetProperty(string objectID, string property, string platformID,
-                    dynamic value)
+                public static void SetProperty(string objectID, string property, dynamic value,
+                    string platformID = null)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
                     packet.keywordArguments.Add("object", objectID);
                     packet.keywordArguments.Add("property", property);
-                    if (platformID != "")
+                    if (platformID != null)
                         packet.keywordArguments.Add("platform", platformID);
                     packet.keywordArguments.Add("value", value);
                     packet.procedure = "ak.wwise.core.object.setProperty";
@@ -343,13 +347,14 @@ namespace ak
                 /// <param name="platformID">The ID (GUID) or path of the platform to link the reference. Set to null-guid for unlinked reference.</param>
                 /// <param name="referenceName">The name of the reference to set.</param>
                 /// <param name="referenceID">The ID (GUID) or path of the object to be referred to.</param>
-                public static void SetReference(string objectID, string platformID, string referenceName,
-                    string referenceID)
+                public static void SetReference(string objectID, string referenceID, string referenceName,
+                    string platformID = null)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
                     packet.keywordArguments.Add("object", objectID);
-                    packet.keywordArguments.Add("platform", platformID);
+                    if (platformID != null)
+                        packet.keywordArguments.Add("platform", platformID);
                     packet.keywordArguments.Add("reference", referenceName);
                     packet.keywordArguments.Add("value", referenceID);
                     packet.procedure = "ak.wwise.core.object.setProperty";

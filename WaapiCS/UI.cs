@@ -21,7 +21,7 @@ namespace ak
                     packet.results.Clear();
                 packet.results = new Dictionary<string, object>();
                 packet.procedure = "ak.wwise.ui.getSelectedObjects";
-                packet.callback = new GetSelectedObjectsCallback(packet);
+                packet.callback = new Callback(packet);
                 packet.options.@return = returnValues2017_1_0_6302;
                 results = connection.Execute(packet);
                 packet.Clear();
@@ -83,7 +83,7 @@ namespace ak
                     if (objects != null)
                         packet.keywordArguments.Add("objects", objects);
                     packet.keywordArguments.Add("command", command);
-                    packet.callback = new CommandCallback(packet);
+                    packet.callback = new Callback(packet);
                     packet.procedure = "ak.wwise.ui.commands.execute";
                     results = connection.Execute(packet);
                     packet.Clear();
@@ -97,7 +97,7 @@ namespace ak
                 {
                     packet.results = new List<string>();
                     packet.results.Clear();
-                    packet.callback = new GetCommandsCallback(packet);
+                    packet.callback = new Callback(packet);
                     packet.procedure = "ak.wwise.ui.commands.getCommands";
                     results = connection.Execute(packet);
                     packet.Clear();

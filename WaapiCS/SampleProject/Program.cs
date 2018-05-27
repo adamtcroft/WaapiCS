@@ -11,7 +11,24 @@ namespace SampleProject
     {
         static void Main(string[] args)
         {
-            List<Dictionary<string, object>> results = ak.wwise.core.soundbank.GetInclusions("{00318C83-50A1-4716-B349-1DF45961A040}");
+            Dictionary<string,object> results = ak.wwise.core.remote.GetConnectionStatus();
+            //ak.wwise.core.Object.SetProperty("{8E598160-6E29-44E0-8145-C31ED577DC45}", "Volume", -1);
+            //ak.wwise.core.Object.SetNotes("{8E598160-6E29-44E0-8145-C31ED577DC45}", "Note");
+            //ak.wwise.core.Object.SetName("{8E598160-6E29-44E0-8145-C31ED577DC45}", "This is a name");
+            //ak.wwise.core.Object.IsPropertyEnabled("{AC5D2B26-8029-42F2-AA5D-EDEF8D9A3036}", "{6E0CB257-C6C8-4c5c-8366-2740DFC441EB}", "Volume");
+            //Dictionary<string, object> results = ak.wwise.core.Object.GetPropertyInfo("Volume", "{C114F296-384C-4208-A23F-BE9DA945F0E3}");
+            //ak.wwise.core.project.Save();
+            //ak.wwise.core.Object.Delete("{82B01565-FB9C-4959-ABC4-1609269755F0}");
+
+            //Dictionary<string, object> results = ak.wwise.core.Object.Create("{F97FA490-EAA3-42E0-8FA3-6D4A26B325F0}", "Sound", "New Sound 8");
+
+            //WwiseValues.getType type = WwiseValues.getType.id;
+            //string[] objects = { "{F97FA490-EAA3-42E0-8A3-6D4A26B325F0}", "{E269A71E-5E07-4B6A-AEB8-978C05199CB1}", "{1742FA50-5008-4F5B-A606-F9BEC58A7128}" };
+            //WwiseValues.Get newGet = new WwiseValues.Get();
+            //newGet.type = type;
+            //newGet.objectArray = objects;
+
+            //Dictionary<string, object> results = ak.wwise.core.Object.Get(newGet);
             //Dictionary<string, object> results = ak.wwise.core.remote.GetConnectionStatus();
             //PrintResults(results);
 
