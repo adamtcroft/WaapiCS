@@ -6,7 +6,8 @@ It is intended to make WAAPI tremendously easier to use in C# by removing the di
 
 The only legal requirement is that you provide attribution (give me credit) in your game.
 
-**Please note that WaapiCS is still under active development.  Known issues (such as calls not working) can be found under the "Issues" tab**
+**Please note that WaapiCS is still under active development.
+Known issues (such as calls not working) can be found under the "Issues" tab.**
 
 ## Prerequisites
 To use WaapiCS, you must have at least a beginner's knowledge of C#.
