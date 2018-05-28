@@ -378,8 +378,6 @@ namespace ak
 
             public class transport
             {
-                //TODO: Add Callback
-                //!: Needs Testing!
                 /// <summary>
                 /// Creates a transport object for the given Wwise object.
                 /// The return transport object can be used to play, stop, pause and resume 
@@ -387,16 +385,18 @@ namespace ak
                 /// </summary>
                 /// <param name="objectID">The ID (GUID) or path of the object to control via the transport object.</param>
                 /// <param name="gameObjectID">The game object to use for playback.</param>
-                public static void Create(string objectID, int gameObjectID)
+                public static List<Dictionary<string, object>> Create(string objectID, int gameObjectID = -1)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
                     packet.keywordArguments.Add("object", objectID);
-                    packet.keywordArguments.Add("gameObject", gameObjectID);
+                    if (gameObjectID >= 0)
+                        packet.keywordArguments.Add("gameObject", gameObjectID);
                     packet.procedure = "ak.wwise.core.transport.create";
                     packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
                     packet.Clear();
+                    return (List<Dictionary<string, object>>)results;
                 }
 
                 //!: Needs Testing!

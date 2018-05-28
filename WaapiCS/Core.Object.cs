@@ -31,7 +31,7 @@ namespace ak
                 /// Creates the specified node in Wwsise
                 /// </summary>
                 /// <param name="parent">The GUID or path of the parent to the new object.</param>
-                /// <param name="type">The type of the new object.</param>
+                /// <param name="type">The type of the new object. See Wwise Objects Reference at audiokinetic.com</param>
                 /// <param name="name">The name of the new object.</param>
                 /// <param name="onNameConflict">The action to take on a name conflict.</param>
                 /// <param name="platform">The GUID or path of the platform to use.  Default uses all linked platforms.</param>
@@ -76,7 +76,8 @@ namespace ak
                         packet.results.Clear();
                     packet.keywordArguments.Add("object", node);
                     packet.keywordArguments.Add("parent", parent);
-                    packet.keywordArguments.Add("onNameConflict", onNameConflict);
+                    if (onNameConflict != WwiseValues.OnNameConflict.fail)
+                        packet.keywordArguments.Add("onNameConflict", onNameConflict.ToString());
                     packet.procedure = "ak.wwise.core.object.copy";
                     packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
@@ -98,7 +99,8 @@ namespace ak
                         packet.results.Clear();
                     packet.keywordArguments.Add("object", node);
                     packet.keywordArguments.Add("parent", parent);
-                    packet.keywordArguments.Add("onNameConflict", onNameConflict.ToString());
+                    if (onNameConflict != WwiseValues.OnNameConflict.fail)
+                        packet.keywordArguments.Add("onNameConflict", onNameConflict.ToString());
                     packet.procedure = "ak.wwise.core.object.move";
                     packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
@@ -134,7 +136,9 @@ namespace ak
                 {
                     if (packet.results != null)
                         packet.results.Clear();
-                    packet.keywordArguments.Add(get.type.ToString(), get.objectArray);
+                    Dictionary<string, object> getNodes = new Dictionary<string, object>();
+                    getNodes[get.type.ToString()] = get.objectArray;
+                    packet.keywordArguments.Add("from", getNodes);
                     if (transform != null)
                         packet.keywordArguments.Add(transform.type.ToString(), transform.objectArray);
                     packet.procedure = "ak.wwise.core.object.get";
@@ -216,13 +220,13 @@ namespace ak
                 /// <param name="node">The GUID of a project node.</param>
                 /// <param name="classID">The class identifier of a node type.</param>
                 /// <returns></returns>
-                public static List<string> GetPropertyNames(string node = "", int classID = 0)
+                public static List<Dictionary<string, object>> GetPropertyNames(string node = null, int classID = 0)
                 {
                     if (packet.results != null)
                         packet.results.Clear();
 
                     packet.procedure = "ak.wwise.core.object.getPropertyNames";
-                    if (node != "")
+                    if (node != null)
                         packet.keywordArguments.Add("object", node);
                     if (classID != 0)
                         packet.keywordArguments.Add("classId", classID);
@@ -230,7 +234,7 @@ namespace ak
                     connection.Execute(packet);
                     packet.Clear();
 
-                    return (List<string>)packet.results;
+                    return (List<Dictionary<string, object>>)packet.results;
                 }
 
                 internal static string[] typeReturnValues =

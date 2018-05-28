@@ -15,17 +15,16 @@ namespace ak
             /// Gets the currently selected Wwise objects.
             /// </summary>
             /// <returns>Details about the selected objects.</returns>
-            public static Dictionary<string, object> GetSelectedObjects()
+            public static List<Dictionary<string, object>> GetSelectedObjects()
             {
                 if (packet.results != null)
                     packet.results.Clear();
-                packet.results = new Dictionary<string, object>();
                 packet.procedure = "ak.wwise.ui.getSelectedObjects";
                 packet.callback = new Callback(packet);
                 packet.options.@return = returnValues2017_1_0_6302;
                 results = connection.Execute(packet);
                 packet.Clear();
-                return (Dictionary<string, object>)results;
+                return (List<Dictionary<string, object>>)results;
             }
 
             public static void BringToForeground()
