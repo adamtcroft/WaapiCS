@@ -1,10 +1,13 @@
 # WaapiCS
-*WaapiCS* is a C# abstraction layer (or "wrapper") for Audiokinetic Wwise's WAAPI.
+**WaapiCS** is a C# abstraction layer (or "wrapper") for Audiokinetic Wwise's WAAPI.
 It is intended to make WAAPI tremendously easier to use in C# by removing the difficulties of WAMP and JSON from the end user.
 
-*WaapiCS* is made available to you under the MIT License.  This means it is free, open source, customizable, and available for commercial use/distribution.
+**WaapiCS** is made available to you under the MIT License.  This means it is free, open source, customizable, and available for commercial use/distribution.
 
 The only legal requirement is that you provide attribution (give me credit) in your game.
+
+**Please note that WaapiCS is still under active development.
+Known issues (such as calls not working) can be found under the "Issues" tab.**
 
 ## Prerequisites
 To use WaapiCS, you must have at least a beginner's knowledge of C#.
