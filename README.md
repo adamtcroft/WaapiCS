@@ -9,6 +9,8 @@ The only legal requirement is that you provide attribution (give me credit) in y
 **Please note that WaapiCS is still under active development.
 Known issues (such as calls not working) can be found under the "Issues" tab.**
 
+Code samples can be found within the solution under **Sample Project**
+
 ## Prerequisites
 To use WaapiCS, you must have at least a beginner's knowledge of C#.
 
