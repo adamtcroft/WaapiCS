@@ -1,0 +1,74 @@
+\hypertarget{classak_1_1wwise_1_1core_1_1switch_container}{}\section{ak.\+wwise.\+core.\+switch\+Container Class Reference}
+\label{classak_1_1wwise_1_1core_1_1switch_container}\index{ak.\+wwise.\+core.\+switch\+Container@{ak.\+wwise.\+core.\+switch\+Container}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1switch_container_ace30cbc9fb9efeb97303649ec7164f77}{Add\+Assignment}} (string child\+ID, string state\+Or\+Switch\+ID)
+\begin{DoxyCompactList}\small\item\em Assign a Switch Container\textquotesingle{}s child to a Switch. This is the equivalent of doing a drag\&drop of the child to a state in the Assigned Objects view. The child is always added at the end for each state. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1switch_container_a54352aa359957b104c3d499943d979b1}{Remove\+Assignment}} (string child\+ID, string state\+Or\+Switch\+ID)
+\begin{DoxyCompactList}\small\item\em Remove an assignment between a Switch Container\textquotesingle{}s child and a State. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1switch_container_acb318b35c61f65b8b09466294e44ef52}{Get\+Assignments}} (string container\+ID)
+\begin{DoxyCompactList}\small\item\em Returns the list of assignments between a Switch Container\textquotesingle{}s children and states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1switch_container_ace30cbc9fb9efeb97303649ec7164f77}\label{classak_1_1wwise_1_1core_1_1switch_container_ace30cbc9fb9efeb97303649ec7164f77}} 
+\index{ak\+::wwise\+::core\+::switch\+Container@{ak\+::wwise\+::core\+::switch\+Container}!Add\+Assignment@{Add\+Assignment}}
+\index{Add\+Assignment@{Add\+Assignment}!ak\+::wwise\+::core\+::switch\+Container@{ak\+::wwise\+::core\+::switch\+Container}}
+\subsubsection{\texorpdfstring{Add\+Assignment()}{AddAssignment()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+switch\+Container.\+Add\+Assignment (\begin{DoxyParamCaption}\item[{string}]{child\+ID,  }\item[{string}]{state\+Or\+Switch\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Assign a Switch Container\textquotesingle{}s child to a Switch. This is the equivalent of doing a drag\&drop of the child to a state in the Assigned Objects view. The child is always added at the end for each state. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+ID} & The ID (G\+U\+ID) or path of the object to assign to a State. This object must be the child of a Switch Container.\\
+\hline
+{\em state\+Or\+Switch\+ID} & The ID (G\+U\+ID) or path of the State or Switch with which to assign. Must be the child of the Switch Group or State Group that is currently set for the Switch Container.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1switch_container_acb318b35c61f65b8b09466294e44ef52}\label{classak_1_1wwise_1_1core_1_1switch_container_acb318b35c61f65b8b09466294e44ef52}} 
+\index{ak\+::wwise\+::core\+::switch\+Container@{ak\+::wwise\+::core\+::switch\+Container}!Get\+Assignments@{Get\+Assignments}}
+\index{Get\+Assignments@{Get\+Assignments}!ak\+::wwise\+::core\+::switch\+Container@{ak\+::wwise\+::core\+::switch\+Container}}
+\subsubsection{\texorpdfstring{Get\+Assignments()}{GetAssignments()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+switch\+Container.\+Get\+Assignments (\begin{DoxyParamCaption}\item[{string}]{container\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the list of assignments between a Switch Container\textquotesingle{}s children and states. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em container\+ID} & The ID (G\+U\+ID) or path of the Switch Container.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1switch_container_a54352aa359957b104c3d499943d979b1}\label{classak_1_1wwise_1_1core_1_1switch_container_a54352aa359957b104c3d499943d979b1}} 
+\index{ak\+::wwise\+::core\+::switch\+Container@{ak\+::wwise\+::core\+::switch\+Container}!Remove\+Assignment@{Remove\+Assignment}}
+\index{Remove\+Assignment@{Remove\+Assignment}!ak\+::wwise\+::core\+::switch\+Container@{ak\+::wwise\+::core\+::switch\+Container}}
+\subsubsection{\texorpdfstring{Remove\+Assignment()}{RemoveAssignment()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+switch\+Container.\+Remove\+Assignment (\begin{DoxyParamCaption}\item[{string}]{child\+ID,  }\item[{string}]{state\+Or\+Switch\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Remove an assignment between a Switch Container\textquotesingle{}s child and a State. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em child\+ID} & The ID (G\+U\+ID) or path of the object assigned to a State. This object must be the child of a Switch Container and must be currently assigned to a State.\\
+\hline
+{\em state\+Or\+Switch\+ID} & The ID (G\+U\+ID) or path of the State or Switch to which the child is assigned. Must be the child of the Switch Group or State Group that is currently set for the Switch Container.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S/Core.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,351 @@
+\hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values}{}\section{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values Class Reference}
+\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values}\index{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values@{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_audio_object}{Audio\+Object}}
+\begin{DoxyCompactList}\small\item\em An audio object. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_aux_send_values}{Aux\+Send\+Values}}
+\begin{DoxyCompactList}\small\item\em A struct of aux send values. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_curve_point}{Curve\+Point}}
+\begin{DoxyCompactList}\small\item\em A curve point defined by x, y coordinates and shape. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_get}{Get}}
+\begin{DoxyCompactList}\small\item\em The type and items to \char`\"{}get\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_get_transform}{Get\+Transform}}
+\begin{DoxyCompactList}\small\item\em The type of transform and items to \char`\"{}get\char`\"{}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_inclusion_object}{Inclusion\+Object}}
+\begin{DoxyCompactList}\small\item\em An inclusion object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_position3_d}{Position3D}}
+\begin{DoxyCompactList}\small\item\em Object position in 3D \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{On\+Name\+Conflict}} \{ {\bfseries rename}, 
+{\bfseries replace}, 
+{\bfseries fail}
+ \}
+\begin{DoxyCompactList}\small\item\em The action to take on a node naming conflict. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9daaf3673fa43ad853a6dfb0c8964881}{Class\+ID}} \{ \newline
+{\bfseries Acoustic\+Texture} = 4718608, 
+{\bfseries Action} = 327696, 
+{\bfseries Action\+Exception} = 4980752, 
+{\bfseries Actor\+Mixer} = 524304, 
+\newline
+{\bfseries Attenuation} = 2686992, 
+{\bfseries Audio\+Device} = 4653072, 
+{\bfseries Audio\+Source} = 16, 
+{\bfseries Aux\+Bus} = 3997712, 
+\newline
+{\bfseries Blend\+Container} = 1900560, 
+{\bfseries Blend\+Track} = 1966096, 
+{\bfseries Bus} = 1376272, 
+{\bfseries Control\+Surface\+Binding} = 4390928, 
+\newline
+{\bfseries Control\+Surface\+Binding\+Group} = 4456464, 
+{\bfseries Control\+Surface\+Session} = 4325392, 
+{\bfseries Conversion} = 3604496, 
+{\bfseries Curve} = 917520, 
+\newline
+{\bfseries Dialogue\+Event} = 3014672, 
+{\bfseries Effect} = 1114128, 
+{\bfseries Event} = 262160, 
+{\bfseries External\+Source} = 3735568, 
+\newline
+{\bfseries External\+Source\+File} = 3670032, 
+{\bfseries Folder} = 131088, 
+{\bfseries Game\+Parameter} = 1507344, 
+{\bfseries Language} = 4915216, 
+\newline
+{\bfseries Midi\+Parameter} = 4128784, 
+{\bfseries Mixing\+Session} = 3473424, 
+{\bfseries Modifier} = 983056, 
+{\bfseries Modulator\+Envelope} = 4259856, 
+\newline
+{\bfseries Modulator\+Lfo} = 4194320, 
+{\bfseries Multi\+Switch\+Entry} = 655360016, 
+{\bfseries Music\+Clip} = 3932176, 
+{\bfseries Music\+Clip\+Midi} = 4063248, 
+\newline
+{\bfseries Music\+Cue} = 3866640, 
+{\bfseries Music\+Fade} = 2555920, 
+{\bfseries Music\+Playlist\+Container} = 2228240, 
+{\bfseries Music\+Playlist\+Item} = 2359312, 
+\newline
+{\bfseries Music\+Segment} = 1769488, 
+{\bfseries Music\+Stinger} = 2490384, 
+{\bfseries Music\+Switch\+Container} = 2293776, 
+{\bfseries Music\+Track} = 1835024, 
+\newline
+{\bfseries Music\+Track\+Sequence} = 3801104, 
+{\bfseries Music\+Transition} = 2424848, 
+{\bfseries Object\+Setting\+Assoc} = 1572880, 
+{\bfseries Panner} = 2752528, 
+\newline
+{\bfseries Param\+Control} = 1441808, 
+{\bfseries Path} = 720912, 
+{\bfseries Platform} = 4522000, 
+{\bfseries Plugin\+Data\+Source} = 3538960, 
+\newline
+{\bfseries Position} = 786448, 
+{\bfseries Project} = 196624, 
+{\bfseries Query} = 2097168, 
+{\bfseries Random\+Sequence\+Container} = 589840, 
+\newline
+{\bfseries Search\+Criteria} = 2162704, 
+{\bfseries Sound} = 65552, 
+{\bfseries Sound\+Bank} = 1179664, 
+{\bfseries State} = 393232, 
+\newline
+{\bfseries State\+Group} = 458768, 
+{\bfseries Switch} = 1310736, 
+{\bfseries Switch\+Container} = 655376, 
+{\bfseries Switch\+Group} = 1245200, 
+\newline
+{\bfseries Trigger} = 2621456, 
+{\bfseries User\+Project\+Settings} = 3342352, 
+{\bfseries Work\+Unit} = 1638416
+ \}
+\begin{DoxyCompactList}\small\item\em The class ID of available Wwise objects. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5c261935f6f77b4260dc66ddb3e56fb7}{Action\+Type}} \{ \newline
+{\bfseries Stop} = 0, 
+{\bfseries Pause} = 1, 
+{\bfseries Resume} = 2, 
+{\bfseries Break} = 3, 
+\newline
+{\bfseries Release\+Envelope} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Action to take. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}{Curve\+Type}} \{ \newline
+{\bfseries Volume\+Dry\+Usage}, 
+{\bfseries Volume\+Wet\+Game\+Usage}, 
+{\bfseries Volume\+Wet\+User\+Usage}, 
+{\bfseries Low\+Pass\+Filter\+Usage}, 
+\newline
+{\bfseries High\+Pass\+Filter\+Usage}, 
+{\bfseries Spread\+Usage}, 
+{\bfseries Focus\+Usage}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of curve. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_ae8b620ede7bbe13a8185450675c9ca75}{Curve\+Points\+Type}} \{ {\bfseries None}, 
+{\bfseries Custom}, 
+{\bfseries Use\+Volume\+Dry}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of curve points to use. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6a4ef16afabafaca1bd0c901c4103cf6}{Curve\+Shape}} \{ \newline
+{\bfseries Constant}, 
+{\bfseries Linear}, 
+{\bfseries Log3}, 
+{\bfseries Log2}, 
+\newline
+{\bfseries Log1}, 
+{\bfseries Inverted\+S\+Curve}, 
+{\bfseries S\+Curve}, 
+{\bfseries Exp1}, 
+\newline
+{\bfseries Exp2}, 
+{\bfseries Exp3}
+ \}
+\begin{DoxyCompactList}\small\item\em The curve shape. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}{Curve\+Interpolation}} \{ \newline
+{\bfseries Log3} = 0, 
+{\bfseries Sine} = 1, 
+{\bfseries Log1} = 2, 
+{\bfseries Inv\+S\+Curve} = 3, 
+\newline
+{\bfseries Linear} = 4, 
+{\bfseries S\+Curve} = 5, 
+{\bfseries Exp1} = 6, 
+{\bfseries Sine\+Recip} = 7, 
+\newline
+{\bfseries Exp3} = 8, 
+{\bfseries Constant} = 9
+ \}
+\begin{DoxyCompactList}\small\item\em The curve interpolation type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6edfb755afdda63c2168e2528fbf107a}{Multi\+Position\+Type}} \{ {\bfseries Single\+Source} = 0, 
+{\bfseries Multi\+Sources} = 1, 
+{\bfseries Multi\+Directions} = 2
+ \}
+\begin{DoxyCompactList}\small\item\em Multi Position Type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aab6588a021852b8a475ad5b07f43d1e9}{Import\+Operation}} \{ {\bfseries create\+New}, 
+{\bfseries use\+Existing}, 
+{\bfseries replace\+Existing}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of import operation. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a1b0c0844c7d8ac428022c97feeec0b5f}{soundbank\+Operation}} \{ {\bfseries add}, 
+{\bfseries remove}, 
+{\bfseries replace}
+ \}
+\begin{DoxyCompactList}\small\item\em The soundbank operation to take. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a485191067ed69983f435631f759b6c93}{inclusion\+Filter}} \{ {\bfseries events}, 
+{\bfseries structures}, 
+{\bfseries media}
+ \}
+\begin{DoxyCompactList}\small\item\em The inclusion filter type. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_abe08eb4038ce656dcf1f451b78a35983}{transport\+Action}} \{ {\bfseries play}, 
+{\bfseries stop}, 
+{\bfseries pause}, 
+{\bfseries play\+Stop}
+ \}
+\begin{DoxyCompactList}\small\item\em The transport action to take. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a965953df32cac96b44c500990fcfd5d2}{get\+Type}} \{ \newline
+{\bfseries id}, 
+{\bfseries search}, 
+{\bfseries path}, 
+{\bfseries of\+Type}, 
+\newline
+{\bfseries query}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of \char`\"{}get\char`\"{} query. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aa760e1a314fbb9fa38c1f8abd6267b16}{get\+Transform\+Type}} \{ {\bfseries select}, 
+{\bfseries range}, 
+{\bfseries where}
+ \}
+\begin{DoxyCompactList}\small\item\em The type of \char`\"{}get\char`\"{} transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5c261935f6f77b4260dc66ddb3e56fb7}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5c261935f6f77b4260dc66ddb3e56fb7}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Action\+Type@{Action\+Type}}
+\index{Action\+Type@{Action\+Type}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Action\+Type}{ActionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5c261935f6f77b4260dc66ddb3e56fb7}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Action\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Action to take. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9daaf3673fa43ad853a6dfb0c8964881}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9daaf3673fa43ad853a6dfb0c8964881}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Class\+ID@{Class\+ID}}
+\index{Class\+ID@{Class\+ID}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Class\+ID}{ClassID}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9daaf3673fa43ad853a6dfb0c8964881}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Class\+ID}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The class ID of available Wwise objects. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Curve\+Interpolation@{Curve\+Interpolation}}
+\index{Curve\+Interpolation@{Curve\+Interpolation}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Curve\+Interpolation}{CurveInterpolation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Curve\+Interpolation}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The curve interpolation type. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_ae8b620ede7bbe13a8185450675c9ca75}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_ae8b620ede7bbe13a8185450675c9ca75}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Curve\+Points\+Type@{Curve\+Points\+Type}}
+\index{Curve\+Points\+Type@{Curve\+Points\+Type}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Curve\+Points\+Type}{CurvePointsType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_ae8b620ede7bbe13a8185450675c9ca75}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Curve\+Points\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The type of curve points to use. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6a4ef16afabafaca1bd0c901c4103cf6}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6a4ef16afabafaca1bd0c901c4103cf6}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Curve\+Shape@{Curve\+Shape}}
+\index{Curve\+Shape@{Curve\+Shape}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Curve\+Shape}{CurveShape}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6a4ef16afabafaca1bd0c901c4103cf6}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Curve\+Shape}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The curve shape. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Curve\+Type@{Curve\+Type}}
+\index{Curve\+Type@{Curve\+Type}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Curve\+Type}{CurveType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Curve\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The type of curve. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aa760e1a314fbb9fa38c1f8abd6267b16}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aa760e1a314fbb9fa38c1f8abd6267b16}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!get\+Transform\+Type@{get\+Transform\+Type}}
+\index{get\+Transform\+Type@{get\+Transform\+Type}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{get\+Transform\+Type}{getTransformType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aa760e1a314fbb9fa38c1f8abd6267b16}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+get\+Transform\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The type of \char`\"{}get\char`\"{} transform. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a965953df32cac96b44c500990fcfd5d2}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a965953df32cac96b44c500990fcfd5d2}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{get\+Type}{getType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a965953df32cac96b44c500990fcfd5d2}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+get\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The type of \char`\"{}get\char`\"{} query. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aab6588a021852b8a475ad5b07f43d1e9}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aab6588a021852b8a475ad5b07f43d1e9}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Import\+Operation@{Import\+Operation}}
+\index{Import\+Operation@{Import\+Operation}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Import\+Operation}{ImportOperation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_aab6588a021852b8a475ad5b07f43d1e9}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Import\+Operation}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The type of import operation. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a485191067ed69983f435631f759b6c93}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a485191067ed69983f435631f759b6c93}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!inclusion\+Filter@{inclusion\+Filter}}
+\index{inclusion\+Filter@{inclusion\+Filter}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{inclusion\+Filter}{inclusionFilter}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a485191067ed69983f435631f759b6c93}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+inclusion\+Filter}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The inclusion filter type. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6edfb755afdda63c2168e2528fbf107a}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6edfb755afdda63c2168e2528fbf107a}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!Multi\+Position\+Type@{Multi\+Position\+Type}}
+\index{Multi\+Position\+Type@{Multi\+Position\+Type}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{Multi\+Position\+Type}{MultiPositionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6edfb755afdda63c2168e2528fbf107a}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+Multi\+Position\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Multi Position Type. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!On\+Name\+Conflict@{On\+Name\+Conflict}}
+\index{On\+Name\+Conflict@{On\+Name\+Conflict}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{On\+Name\+Conflict}{OnNameConflict}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+On\+Name\+Conflict}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The action to take on a node naming conflict. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a1b0c0844c7d8ac428022c97feeec0b5f}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a1b0c0844c7d8ac428022c97feeec0b5f}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!soundbank\+Operation@{soundbank\+Operation}}
+\index{soundbank\+Operation@{soundbank\+Operation}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{soundbank\+Operation}{soundbankOperation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a1b0c0844c7d8ac428022c97feeec0b5f}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+soundbank\+Operation}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The soundbank operation to take. 
+
+\mbox{\Hypertarget{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_abe08eb4038ce656dcf1f451b78a35983}\label{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_abe08eb4038ce656dcf1f451b78a35983}} 
+\index{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}!transport\+Action@{transport\+Action}}
+\index{transport\+Action@{transport\+Action}!Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values@{Waapi\+C\+S\+::\+Custom\+Values\+::\+Wwise\+Values}}
+\subsubsection{\texorpdfstring{transport\+Action}{transportAction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_abe08eb4038ce656dcf1f451b78a35983}{Waapi\+C\+S.\+Custom\+Values.\+Wwise\+Values.\+transport\+Action}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+The transport action to take. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S/Wwise\+Values.\+cs\end{DoxyCompactItemize}

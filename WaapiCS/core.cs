@@ -213,19 +213,19 @@ namespace ak
                 /// <param name="importOperation">Determines how import object creation is performed.</param>
                 /// <param name="defaultValues">Default values for each item in "imports".</param>
                 /// <param name="imports">The objects to import.</param>
-                public static void Import(WwiseValues.ImportOperation importOperation,
-                    WwiseValues.AudioObject defaultValues, WwiseValues.AudioObject[] imports)
-                {
-                    if (packet.results != null)
-                        packet.results.Clear();
-                    packet.keywordArguments.Add("importOperation", importOperation.ToString());
-                    packet.keywordArguments.Add("default", defaultValues);
-                    packet.keywordArguments.Add("imports", imports);
-                    packet.procedure = "ak.wwise.core.audio.import";
-                    packet.callback = new Callback(packet);
-                    connection.Execute(packet);
-                    packet.Clear();
-                }
+                //public static void Import(WwiseValues.ImportOperation importOperation,
+                //    WwiseValues.AudioObject defaultValues, WwiseValues.AudioObject[] imports)
+                //{
+                //    if (packet.results != null)
+                //        packet.results.Clear();
+                //    packet.keywordArguments.Add("importOperation", importOperation.ToString());
+                //    packet.keywordArguments.Add("default", defaultValues);
+                //    packet.keywordArguments.Add("imports", imports);
+                //    packet.procedure = "ak.wwise.core.audio.import";
+                //    packet.callback = new Callback(packet);
+                //    connection.Execute(packet);
+                //    packet.Clear();
+                //}
 
                 //!: Needs Testing!
                 /// <summary>
@@ -235,27 +235,26 @@ namespace ak
                 /// <param name="importLanguage">Import language for audio file import.</param>
                 /// <param name="importOperation">Determines how import object creation is performed.</param>
                 /// <param name="importFile">Location of tab-delimited import file.</param>
-                public static void ImportTabDelimited(string importLocation,
-                    string importLanguage,
-                    WwiseValues.ImportOperation importOperation,
-                    string importFile)
-                {
-                    if (packet.results != null)
-                        packet.results.Clear();
-                    packet.keywordArguments.Add("importLocation", importLocation);
-                    packet.keywordArguments.Add("importLanguage", importLanguage);
-                    packet.keywordArguments.Add("importOperation", importOperation);
-                    packet.keywordArguments.Add("importFile", importFile);
-                    packet.procedure = "ak.wwise.core.audio.importTabDelimited";
-                    packet.callback = new Callback(packet);
-                    connection.Execute(packet);
-                    packet.Clear();
-                }
+                //public static void ImportTabDelimited(string importLocation,
+                //    string importLanguage,
+                //    WwiseValues.ImportOperation importOperation,
+                //    string importFile)
+                //{
+                //    if (packet.results != null)
+                //        packet.results.Clear();
+                //    packet.keywordArguments.Add("importLocation", importLocation);
+                //    packet.keywordArguments.Add("importLanguage", importLanguage);
+                //    packet.keywordArguments.Add("importOperation", importOperation);
+                //    packet.keywordArguments.Add("importFile", importFile);
+                //    packet.procedure = "ak.wwise.core.audio.importTabDelimited";
+                //    packet.callback = new Callback(packet);
+                //    connection.Execute(packet);
+                //    packet.Clear();
+                //}
             }
 
             public static class audioSourcePeaks
             {
-                //TODO: Setup Return Callback
                 //!: Needs Testing!
                 /// <summary>
                 /// Get the min/max peak pairs, in a given region of an audio source,
@@ -287,7 +286,6 @@ namespace ak
                     packet.Clear();
                 }
 
-                //TODO: Setup Return Callback
                 //!: Needs Testing!
                 /// <summary>
                 /// Get the min/max peak pairs in the entire trimmed region of an audio source,
@@ -358,7 +356,6 @@ namespace ak
                     packet.Clear();
                 }
 
-                //TODO: Create callback
                 //!: Needs Testing!
                 /// <summary>
                 /// Returns the list of assignments between a Switch Container's children and states.
@@ -434,7 +431,6 @@ namespace ak
                     packet.Clear();
                 }
 
-                //TODO: Create callback
                 //!: Needs Testing!
                 /// <summary>
                 /// Returns the list of transport objects.
@@ -449,7 +445,6 @@ namespace ak
                     packet.Clear();
                 }
 
-                //TODO: Create callback
                 //!: Needs Testing!
                 /// <summary>
                 /// Gets the state of the given transport object.

@@ -1,0 +1,112 @@
+\hypertarget{class_waapi_c_s_1_1_communication_1_1_connection}{}\section{Waapi\+C\+S.\+Communication.\+Connection Class Reference}
+\label{class_waapi_c_s_1_1_communication_1_1_connection}\index{Waapi\+C\+S.\+Communication.\+Connection@{Waapi\+C\+S.\+Communication.\+Connection}}
+
+
+The object that creates a connection to Wwise via W\+A\+A\+PI.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_connection_a532a29f220d9ff5a79562693a87326b3}{Connection}} ()
+\begin{DoxyCompactList}\small\item\em The object that creates a connection to Wwise via W\+A\+A\+PI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_connection_a96ee59b454b0721752d4520a0aa49515}{Test\+Ping}} ()
+\begin{DoxyCompactList}\small\item\em Tests the ping to Wwise. \end{DoxyCompactList}\item 
+dynamic \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_connection_a14ecc5c888dded234beb95f975e1d708}{Execute}} (\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_packet}{Packet}} packet)
+\begin{DoxyCompactList}\small\item\em Sends the specified J\+S\+ON packet to Wwise, executing the corresponding one-\/off command. \end{DoxyCompactList}\item 
+dynamic \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_connection_a7b579e64444614a48bdfb6b492e4efc0}{Execute}} (\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscriber}{Subscriber}} subscription)
+\begin{DoxyCompactList}\small\item\em Connects the specified J\+S\+ON subscription with Wwise. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a80d023a259589d9c7e642470c3e289bd}\label{class_waapi_c_s_1_1_communication_1_1_connection_a80d023a259589d9c7e642470c3e289bd}} 
+Default\+Wamp\+Channel\+Factory {\bfseries factory} = new Default\+Wamp\+Channel\+Factory()
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a9f3345a0bba27ea1888fcf8ae1b4db14}\label{class_waapi_c_s_1_1_communication_1_1_connection_a9f3345a0bba27ea1888fcf8ae1b4db14}} 
+I\+Wamp\+Channel {\bfseries channel}
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_aaf36be1368da4d7a57e53d173d81c7b4}\label{class_waapi_c_s_1_1_communication_1_1_connection_aaf36be1368da4d7a57e53d173d81c7b4}} 
+I\+Wamp\+Realm\+Proxy {\bfseries realm\+Proxy}
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a71cb451f001c1fab9b5facc9ce1676fe}\label{class_waapi_c_s_1_1_communication_1_1_connection_a71cb451f001c1fab9b5facc9ce1676fe}} 
+I\+Wamp\+Topic\+Proxy {\bfseries topic\+Proxy}
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a7eb19166d34fcf65f8f9bf99164908c8}\label{class_waapi_c_s_1_1_communication_1_1_connection_a7eb19166d34fcf65f8f9bf99164908c8}} 
+static Auto\+Reset\+Event {\bfseries event\+Queue} = new Auto\+Reset\+Event(false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The object that creates a connection to Wwise via W\+A\+A\+PI. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a532a29f220d9ff5a79562693a87326b3}\label{class_waapi_c_s_1_1_communication_1_1_connection_a532a29f220d9ff5a79562693a87326b3}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}!Connection@{Connection}}
+\index{Connection@{Connection}!Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}}
+\subsubsection{\texorpdfstring{Connection()}{Connection()}}
+{\footnotesize\ttfamily Waapi\+C\+S.\+Communication.\+Connection.\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The object that creates a connection to Wwise via W\+A\+A\+PI. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a14ecc5c888dded234beb95f975e1d708}\label{class_waapi_c_s_1_1_communication_1_1_connection_a14ecc5c888dded234beb95f975e1d708}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}!Execute@{Execute}}
+\index{Execute@{Execute}!Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}}
+\subsubsection{\texorpdfstring{Execute()}{Execute()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily dynamic Waapi\+C\+S.\+Communication.\+Connection.\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_packet}{Packet}}}]{packet }\end{DoxyParamCaption})}
+
+
+
+Sends the specified J\+S\+ON packet to Wwise, executing the corresponding one-\/off command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The J\+S\+ON packet.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a7b579e64444614a48bdfb6b492e4efc0}\label{class_waapi_c_s_1_1_communication_1_1_connection_a7b579e64444614a48bdfb6b492e4efc0}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}!Execute@{Execute}}
+\index{Execute@{Execute}!Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}}
+\subsubsection{\texorpdfstring{Execute()}{Execute()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily dynamic Waapi\+C\+S.\+Communication.\+Connection.\+Execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscriber}{Subscriber}}}]{subscription }\end{DoxyParamCaption})}
+
+
+
+Connects the specified J\+S\+ON subscription with Wwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subscription} & The J\+S\+ON subscription.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_connection_a96ee59b454b0721752d4520a0aa49515}\label{class_waapi_c_s_1_1_communication_1_1_connection_a96ee59b454b0721752d4520a0aa49515}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}!Test\+Ping@{Test\+Ping}}
+\index{Test\+Ping@{Test\+Ping}!Waapi\+C\+S\+::\+Communication\+::\+Connection@{Waapi\+C\+S\+::\+Communication\+::\+Connection}}
+\subsubsection{\texorpdfstring{Test\+Ping()}{TestPing()}}
+{\footnotesize\ttfamily void Waapi\+C\+S.\+Communication.\+Connection.\+Test\+Ping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tests the ping to Wwise. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S.\+Communication/Connection.\+cs\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S.\+Communication/Execute.\+cs\end{DoxyCompactItemize}

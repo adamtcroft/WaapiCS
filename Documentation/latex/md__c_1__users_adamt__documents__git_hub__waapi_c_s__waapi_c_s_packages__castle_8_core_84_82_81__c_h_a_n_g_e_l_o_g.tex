@@ -1,0 +1,437 @@
+\subsection*{4.\+2.\+1 (2017-\/10-\/11)}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Add missing equality checks in {\ttfamily Method\+Signature\+Comparer.\+Equal\+Signature\+Types} to fix {\ttfamily Type\+Load\+Exception}s (\char`\"{}\+Method does not have an implementation\char`\"{}) (, \#310)
+\item Add missing X\+ML documentation files to Nu\+Get packages (, \#312)
+\end{DoxyItemize}
+
+\subsection*{4.\+2.\+0 (2017-\/09-\/28)}
+
+Enhancements\+:
+\begin{DoxyItemize}
+\item Add I\+Proxy\+Target\+Accessor.\+Dyn\+Proxy\+Set\+Target to set the target of a proxy (, \#293)
+\item Internal dynamic proxy fields are now private instead of public (, \#260)
+\end{DoxyItemize}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Make Proxy\+Util.\+Is\+Accessible(\+Method\+Base) take into account declaring type\textquotesingle{}s accessibility so it doesn\textquotesingle{}t report false negatives for e.\+g. public methods in inaccessible classes. (, \#289)
+\item Fix Invalid\+Cast\+Exception calling I\+Change\+Proxy\+Target.\+Change\+Proxy\+Target proxying generic interfaces (, \#293)
+\item Ignore minor/patch level version for Assembly\+Version\+Attribute as this creates binding errors for downstream libraries (, \#288)
+\item Fix Dictionary\+Adapter firing Notify\+Property\+Chang(ed/ing) events after Cancel\+Edit (, \#299)
+\item Fix Argument\+Exception when overriding method with nested generics (, \#297)
+\item Explicit package versioning applied within solution to avoid maligned Nu\+Get upgrades for lock step versioned packages. (, \#292)
+\end{DoxyItemize}
+
+Deprecations\+:
+\begin{DoxyItemize}
+\item I\+Change\+Proxy\+Target.\+Change\+Proxy\+Target is deprecated in favor of I\+Proxy\+Target\+Accessor.\+Dyn\+Proxy\+Set\+Target (, \#293)
+\end{DoxyItemize}
+
+\subsection*{4.\+1.\+1 (2017-\/07-\/12)}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Prevent member name collision when proxy implements same generic interface more than twice (, \#88)
+\item Fix incorrect replication (reversed order) of custom modifiers (modopts and modreqs) on the C\+LR, does not work yet on Mono (, \#277)
+\item Fix C\+OM interface proxy error case throwing exceptions trying to release null pointer from Query\+Interface (, \#281)
+\end{DoxyItemize}
+
+\subsection*{4.\+1.\+0 (2017-\/06-\/11)}
+
+Breaking Changes\+:
+\begin{DoxyItemize}
+\item Remove Allow\+Partially\+Trusted\+Callers\+Attribute, which wasn\textquotesingle{}t defined by default (, \#241)
+\item Upgrade log4net to v2.\+0.\+8 (, \#241)
+\end{DoxyItemize}
+
+Enhancements\+:
+\begin{DoxyItemize}
+\item Add Proxy\+Util.\+Is\+Accessible to check if a method is accessible to Dynamic\+Proxy\+Gen\+Assembly2 (Blair Conrad, \#235)
+\item Refactor build engineering to support App\+Veyor and Travis\+CI (, \#241)
+\end{DoxyItemize}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Fix order of class proxy constructor arguments when using multiple mixins (, \#230)
+\item Fix dependency on \char`\"{}\+System.\+Component\+Model.\+Type\+Converter\char`\"{} Nu\+Get package version that does not exist (\#239)
+\item Fix Param\+Array\+Attribute not being replicated in proxy (, \#121)
+\item Fix System.\+Net.\+Mail.\+Smtp\+Client is obsolete on Mono warning (\#254)
+\end{DoxyItemize}
+
+\subsection*{4.\+0.\+0 (2017-\/01-\/25)}
+
+Breaking Changes\+:
+\begin{DoxyItemize}
+\item Update to N\+Log 4.\+4.\+1 and remove beta .N\+ET Core support for N\+Log (\#228)
+\item Update to log4net 2.\+0.\+7 (\#229)
+\end{DoxyItemize}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Fix Custom\+Attribute\+Info.\+From\+Expression for V\+B.\+N\+ET (, \#223)
+\end{DoxyItemize}
+
+\subsection*{4.\+0.\+0-\/beta002 (2016-\/10-\/28)}
+
+Breaking Changes\+:
+\begin{DoxyItemize}
+\item Rework Serilog integration to accept an I\+Logger rather than a Logger\+Configuration to work correctly with Serilog (\#142, \#211)
+\item Remove obsolete property {\ttfamily Attributes\+To\+Add\+To\+Generated\+Types} from {\ttfamily Proxy\+Generation\+Options} (\#219)
+\item Change type of {\ttfamily Proxy\+Generation\+Options.\+Additional\+Attributes} to {\ttfamily I\+List$<$Custom\+Attribute\+Info$>$} (\#219)
+\item Remove {\ttfamily I\+Attribute\+Disassembler} which is no longer necessary (\#219)
+\end{DoxyItemize}
+
+Enhancements\+:
+\begin{DoxyItemize}
+\item Add I\+Proxy\+Generator interface for the Proxy\+Generator class (\#215)
+\item Improve default list of attributes to avoid replicating. Code Access Security attributes and Marshal\+As\+Attribute will no longer be replicated (\#221)
+\end{DoxyItemize}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Fix building on Mono 4.\+6.\+1
+\item Different attributes in {\ttfamily Proxy\+Generation\+Options.\+Additional\+Attributes} now generates different proxy types (\#219)
+\end{DoxyItemize}
+
+\subsection*{4.\+0.\+0-\/beta001 (2016-\/07-\/17)}
+
+Breaking Changes\+:
+\begin{DoxyItemize}
+\item Update to log4net 1.\+2.\+15/2.0.\+5 (\#199)
+\item Update to N\+Log 4.\+4.\+0-\/beta13 (\#199)
+\item Update to Serilog 2.\+0.\+0 (\#199)
+\end{DoxyItemize}
+
+Enhancements\+:
+\begin{DoxyItemize}
+\item .N\+ET Core 1.\+0 and .N\+ET Standard 1.\+3 support (Jonathon Rossi, Jeremy Meng)
+\item Restore Dynamic\+Dictionary class
+\end{DoxyItemize}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Fix target framework moniker in Nu\+Get package for .N\+ET Core (\#174)
+\end{DoxyItemize}
+
+\subsection*{4.\+0.\+0-\/alpha001 (2016-\/04-\/07)}
+
+Breaking Changes\+:
+\begin{DoxyItemize}
+\item Remove all Silverlight support (\#100, \#150)
+\item Remove Dynamic\+Proxy\textquotesingle{}s Remotable\+Invocation and remoting support for invocations (\#110, \#65)
+\end{DoxyItemize}
+
+Enhancements\+:
+\begin{DoxyItemize}
+\item .N\+ET Core D\+NX and dotnet5.\+4 support via feature conditional compilation (Jonathon Rossi, Jeremy Meng)
+\item Build script improvements and consolidate version numbers (Blair Conrad, \#75, \#152, \#153)
+\end{DoxyItemize}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item Fix \textquotesingle{}System.\+Argument\+Exception\+: Constant does not match the defined type\textquotesingle{} with optional, nullable enum method parameters (Daniel Yankowsky, \#141, \#149)
+\item Fix proxy generation hook notification for virtual but final methods (Axel Heer, \#148)
+\item Fix Invalid\+Cast\+Exception with custom attribute having an enum array parameter with non-\/int enum (, \#104, \#105)
+\item Update to Mono 4.\+0.\+2 and improve Mono support (\#79, \#95, \#102)
+\item Fix \textquotesingle{}System.\+Array\+Type\+Mismatch\+Exception\+: Source array type cannot be assigned to destination array type\textquotesingle{} on Mono (\#81)
+\item Fix \textquotesingle{}System.\+Argument\+Exception\+: System.\+Decimal is not a supported constant type\textquotesingle{} with optional method parameters (, \#87, \#91)
+\item Fix Proxy\+Generator cache does not take into account Additional\+Attributes (, \#77, \#78)
+\item Fix Castle.\+Services.\+Logging.\+Serilog\+Integration.\+dll missing some assembly info attributes (, \#20, \#82)
+\end{DoxyItemize}
+
+\subsection*{3.\+3.\+3 (2014-\/11-\/06)}
+
+
+\begin{DoxyItemize}
+\item Fix Serilog integration modifies Logger\+Configuration.\+Minimum\+Level (\#70)
+\item Add Source\+Context to the Serilog logger (, \#69)
+\end{DoxyItemize}
+
+\subsection*{3.\+3.\+2 (2014-\/11-\/03)}
+
+
+\begin{DoxyItemize}
+\item fixed \#66 -\/ Serilog\+Logger implementation bug where exceptions were passed through incorrectly
+\end{DoxyItemize}
+
+\subsection*{3.\+3.\+1 (2014-\/09-\/10)}
+
+
+\begin{DoxyItemize}
+\item implemented \#61 -\/ Added support for Serilog -\/ contributed by Russell J Baker ()
+\end{DoxyItemize}
+
+\subsection*{3.\+3.\+0 (2014-\/04-\/27)}
+
+
+\begin{DoxyItemize}
+\item implemented \#51 -\/ removed abandoned projects\+: Binder, Pagination, Validator
+\item implemented \#49 -\/ build Nu\+Get and Zip packages from Team\+City -\/ contributed by Blair Conrad ()
+\item implemented \#42 -\/ move complicated Build\+Internals\+Visible\+Message\+For\+Type method out of Dynamic\+Proxy\+Builder -\/ contributed by Blair Conrad ()
+\item fixed \#47 -\/ Calling Dynamic\+Proxy proxy methods with multidimensional array parameters -\/ contributed by Ed Parcell ()
+\item fixed \#44 -\/ Dictionary\+Adapter Fetch\+Attribute on type has no effect
+\item fixed \#34 and \#39 -\/ inaccessible type parameters should give better error messsages -\/ contributed by Blair Conrad ()
+\end{DoxyItemize}
+
+\subsection*{3.\+2.\+2 (2013-\/11-\/30)}
+
+
+\begin{DoxyItemize}
+\item fixed \#35 -\/ Parameter\+Builder.\+Set\+Constant fails when using a default value of null -\/ contributed by ()
+\end{DoxyItemize}
+
+\subsection*{3.\+2.\+1 (2013-\/10-\/05)}
+
+
+\begin{DoxyItemize}
+\item fixed \#32 -\/ Improve configuration of Smtp\+Client in sync sending -\/ contributed by Artur Dorochowicz ()
+\item fixed \#31 -\/ \mbox{[}Dynamic\+Proxy\mbox{]} Preserve Default\+Values of proxied method\textquotesingle{}s parameters (in .N\+ET 4.\+5)
+\item fixed \#30 -\/ tailoring Internals\+Visible\+To message based on assembly of inaccessible type -\/ contributed by Blair Conrad ()
+\item fixed \#27 -\/ Allow dynamic proxy of generic interfaces which have generic methods, under Mono 2.\+10.\+8 and Mono 3.\+0.\+6 -\/ contributed by Iain Ballard (-\/e-\/b)
+\item fixed \#26 -\/ Proxy of C\+OM class issue, reference count incremented -\/ contributed by Jean-\/\+Claude Viau ()
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/188 -\/ Create\+Interface\+Proxy\+Without\+Target fails with interface containing member with \textquotesingle{}ref U\+Int\+Ptr\textquotesingle{} -\/ contributed by Pier Janssen ()
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/186 -\/ .Net remoting (transparent proxy) cannot be proxied -\/ contributed by Jean-\/\+Claude Viau ()
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/185 -\/ Proxy\+Util.\+Get\+Unproxied\+Instance returns proxy object for Class\+Proxy\+With\+Target instead of its target -\/ contributed by Dmitry Xlestkov (-\/s-\/x)
+\end{DoxyItemize}
+
+\subsection*{3.\+2.\+0 (2013-\/02-\/16)}
+
+
+\begin{DoxyItemize}
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/179 -\/ Exception when creating a generic proxy (from cache)
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/175 -\/ invalid Composition\+Invocation type used when code uses interface proxies with and without Interceptor\+Selector
+\end{DoxyItemize}
+
+\subsection*{3.\+1.\+0 (2012-\/08-\/05)}
+
+
+\begin{DoxyItemize}
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/174 -\/ Unable to cast object of type \textquotesingle{}System.\+Collections.\+Object\+Model.\+Read\+Only\+Collection\`{}1\mbox{[}System.\+Reflection.\+Custom\+Attribute\+Typed\+Argument\mbox{]}\textquotesingle{} to type \textquotesingle{}System.\+Array\textquotesingle{}
+\end{DoxyItemize}
+
+\subsection*{3.\+1.\+0 RC (2012-\/07-\/08)}
+
+
+\begin{DoxyItemize}
+\item support multiple inheritance of DA attributes on interfaces.
+\item B\+R\+E\+A\+K\+I\+NG C\+H\+A\+N\+GE\+: removed propogate child notifications as it violated I\+Notify\+Property\+Changed contract
+\item improved Dictionary\+Adapter performance
+\item generalized I\+Binding\+List support for Dictionary\+Adapters
+\item added reference support to Xml\+Adapter
+\item B\+R\+E\+A\+K\+I\+NG C\+H\+A\+N\+GE\+: refactored X\+Path\+Adapter into Xml\+Adapter with much more flexibility to support other input like X\+Linq
+\item implemented C\+O\+R\+E-\/43 -\/ Add option to skip configuring log4net/nlog
+\item fixed C\+O\+R\+E-\/44 -\/ N\+Log logger does not preserver call site info
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/171 -\/ P\+E\+Verify error on generic method definition
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/170 -\/ Calls to properties inside non-\/intercepted methods are not forwarded to target object (regression from v2.\+5)
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/169 -\/ Support I\+Change\+Proxy\+Target on additional interfaces and mixins when using Create\+Interface\+Proxy\+With\+Target\+Interface
+\end{DoxyItemize}
+
+\subsection*{3.\+0.\+0 (2011-\/12-\/13)}
+
+
+\begin{DoxyItemize}
+\item no major changes since RC
+\end{DoxyItemize}
+
+\subsection*{3.\+0.\+0 RC 1 (2011-\/11-\/20)}
+
+
+\begin{DoxyItemize}
+\item Applied Jeff Sharps patch that refactored Xml Dictionary\+Adapter to improve maintainability and enable more complete functionality
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/165 -\/ Object.\+Get\+Type() and Object.\+Memberwise\+Clone() should be ignored and not reported as non-\/interceptable to I\+Proxy\+Generation\+Hook
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/164 -\/ Invalid Proxy type generated when there are more than one base class generic constraints
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/162 -\/ ref or out parameters can not be passed back if proxied method throw an exception
+\end{DoxyItemize}
+
+\subsection*{3.\+0.\+0 beta 1 (2011-\/08-\/14)}
+
+Breaking Changes\+:
+\begin{DoxyItemize}
+\item Removed overloads of logging methods that were taking format string from I\+Logger and I\+Logger and I\+Extended\+Logger and didn\textquotesingle{}t have word Format in their name.
+\begin{DoxyItemize}
+\item For example\+:
+\begin{DoxyItemize}
+\item void Error(string format, params object\mbox{[}$\,$\mbox{]} args); // was removed
+\item void Error\+Format(string format, params object\mbox{[}$\,$\mbox{]} args); //use this one instead
+\end{DoxyItemize}
+\item impact -\/ low
+\item fixability -\/ medium
+\item description -\/ To minimize confusion and duplication those methods were removed.
+\item fix -\/ Use methods that have explicit \char`\"{}\+Format\char`\"{} word in their name and same signature.
+\end{DoxyItemize}
+\item Removed Web\+Logger and Web\+Logger\+Factory
+\begin{DoxyItemize}
+\item impact -\/ low
+\item fixability -\/ medium
+\item description -\/ To minimize management overhead the classes were removed so that only single Client Profile version of Castle.\+Core can be distributed.
+\item fix -\/ You can use N\+Log or Log4\+Net web logger integration, or reuse implementation of existing web logger and use it as a custom logger.
+\end{DoxyItemize}
+\item Removed obsolete overload of Proxy\+Generator.\+Create\+Class\+Proxy
+\begin{DoxyItemize}
+\item impact -\/ low
+\item fixability -\/ trivial
+\item description -\/ Deprecated overload of Proxy\+Generator.\+Create\+Class\+Proxy was removed to keep the method consistent with other methods and to remove confusion
+\item fix -\/ whenever removed overload was used, use one of the other overloads.
+\end{DoxyItemize}
+\item I\+Proxy\+Generation\+Hook.\+Non\+Virtual\+Member\+Notification method was renamed
+\begin{DoxyItemize}
+\item impact -\/ high
+\item fixability -\/ easy
+\item description -\/ to accommodate class proxies with target method Non\+Virtual\+Member\+Notification on I\+Proxy\+Generation\+Hook type was renamed to more accurate Non\+Proxyable\+Member\+Notification since for class proxies with target not just methods but also fields and other member that break the abstraction will be passed to this method.
+\item fix -\/ whenever Non\+Virtual\+Member\+Notification is used/implemented change the method name to Non\+Proxyable\+Member\+Notification. Implementors should also accommodate possibility that not only Method\+Infos will be passed as method\textquotesingle{}s second parameter.
+\end{DoxyItemize}
+\item Dynamic\+Proxy will now allow to intercept members of System.\+Object
+\begin{DoxyItemize}
+\item impact -\/ very low
+\item fixability -\/ easy
+\item description -\/ to allow scenarios like mocking of System.\+Object members, Dynamic\+Proxy will not disallow proxying of these methods anymore. All\+Methods\+Hook (default I\+Proxy\+Generation\+Hook) will still filter them out though.
+\item fix -\/ whenever custom I\+Proxy\+Generation\+Hook is used, user should account for System.\+Object\textquotesingle{}s members being now passed to Should\+Intercept\+Method and Non\+Virtual\+Member\+Notification methods and if neccessary update the code to handle them appropriately.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Bugfixes\+:
+\begin{DoxyItemize}
+\item fixed C\+O\+R\+E-\/37 -\/ T\+AB characters in the X\+ML Configuration of a component parameter is read as String.\+Empty
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/161 -\/ Strong Named Dynamic\+Proxy Assembly Not Available in Silverligh
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/159 -\/ Sorting Member\+Info array for serialization has side effects
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/158 -\/ Can\textquotesingle{}t create class proxy with target and without target in same Proxy\+Generator
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/153 -\/ When proxying a generic interface which has an interface as Generic\+Type . No proxy can be created
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/151 -\/ Cast error when using attributes
+\item implemented C\+O\+R\+E-\/33 -\/ Add lazy logging
+\item implemented D\+Y\+N\+P\+R\+O\+X\+Y-\/156 -\/ Provide mechanism for interceptors to implement retry logic
+\item removed obsolete members from I\+Logger and its implementations
+\end{DoxyItemize}
+
+\subsection*{2.\+5.\+2 (2010-\/11-\/15)}
+
+
+\begin{DoxyItemize}
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/150 -\/ Finalizer should not be proxied
+\item implemented D\+Y\+N\+P\+R\+O\+X\+Y-\/149 -\/ Make All\+Methods\+Hook members virtual so it can be used as a base class
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/147 -\/ Can\textquotesingle{}t crete class proxies with two non-\/public methods having same argument types but different return type
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/145 Unable to proxy System.\+Threading.\+Synchronization\+Context (.N\+ET 4.\+0)
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/144 -\/ params argument not supported in constructor
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/143 -\/ Permit call to reach \char`\"{}non-\/proxied\char`\"{} methods of inherited interfaces
+\item implemented D\+Y\+N\+P\+R\+O\+X\+Y-\/139 -\/ Better error message
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/133 -\/ Debug assertion in Class\+Proxy\+Instance\+Contributor fails when proxying I\+Serializable with an explicit implementation of Get\+Object\+Data
+\item fixed C\+O\+R\+E-\/32 -\/ Determining if permission is granted via Permission\+Util does not work in .N\+ET 4
+\item applied patch by Alwin Meijs -\/ Extended\+Log4net\+Factory can be configured with a stream from for example an embedded log4net xml config
+\item Upgraded N\+Log to 2.\+0 Beta 1
+\item Added Default\+Xml\+Serializer to bridge X\+Path\+Adapter with standard Xml Serialization.
+\item X\+Path\+Adapter for Dictionary\+Adapter added I\+X\+Path\+Serializer to provide hooks for custom serialization.
+\end{DoxyItemize}
+
+\subsection*{2.\+5.\+1 (2010-\/09-\/21)}
+
+
+\begin{DoxyItemize}
+\item Interface proxy with target Interface now accepts null as a valid target value (which can be replaced at a later stage).
+\item Dictionary\+Adapter behavior overrides are now ordered with all other behaviors
+\item B\+R\+E\+A\+K\+I\+NG C\+H\+A\+N\+GE\+: removed web logger so that by default Castle.\+Core works in .N\+ET 4 client profile
+\item added paramter to Module\+Scope disabling usage of signed modules. This is to workaround issue D\+Y\+N\+P\+R\+O\+X\+Y-\/134. Also a descriptive exception message is being thrown now when the issue is detected.
+\item Added I\+Dictionary\+Behavior\+Builder to allow grouping behaviors
+\item Added Generic\+Dictionary\+Adapter to simplify generic value sources
+\item fixed issue D\+Y\+N\+P\+R\+O\+X\+Y-\/138 -\/ Error message missing space
+\item fixed false positive where Dynamic\+Proxy would not let you proxy interface with target interface when target object was a C\+OM object.
+\item fixed Reflection\+Based\+Dictionary\+Adapter when using indexed properties
+\end{DoxyItemize}
+
+\subsection*{2.\+5.\+0 (2010-\/08-\/21)}
+
+
+\begin{DoxyItemize}
+\item Dynamic\+Proxy will now not replicate non-\/public attribute types
+\item Applied patch from Kenneth Siewers M�ller which adds parameterless constructor to Default\+Smtp\+Sender implementation, to be able to configure the inner Smtp\+Client from the application configuration file (system.\+net.\+smtp).
+\item added support for .N\+ET 4 and Silverlight 4, updated solution to Visual\+Studio 2010
+\item Removed obsolete overload of Create\+Class\+Proxy
+\item Added class proxy with taget
+\item Added ability to intercept explicitly implemented generic interface methods on class proxy.
+\item Dynamic\+Proxy does not disallow intercepting members of System.\+Object anymore. All\+Methods\+Hook will still filter them out though.
+\item Added ability to intercept explicitly implemented interface members on class proxy. Does not support generic members.
+\item Merged Dynamic\+Proxy into Core binary
+\item fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/\+I\+S\+S\+U\+E-\/132 -\/ \char`\"{}\+Meta\+Property equals implementation incorrect\char`\"{}
+\item Fixed bug in Diagnostics\+Logger\+Test\+Case, where when running as non-\/admin, the teardown will throw Security\+Exception (contributed by maxild)
+\item Split IoC specific classes into Castle.\+Windsor project
+\item Merged logging services solution
+\item Merged Dynamic\+Proxy project
+\end{DoxyItemize}
+
+\subsection*{1.\+2.\+0 (2010-\/01-\/11)}
+
+
+\begin{DoxyItemize}
+\item Added I\+Email\+Sender interface and its default implementation
+\end{DoxyItemize}
+
+\subsection*{1.\+2.\+0 beta (2009-\/12-\/04)}
+
+
+\begin{DoxyItemize}
+\item B\+R\+E\+A\+K\+I\+NG C\+H\+A\+N\+GE -\/ added Change\+Proxy\+Target method to I\+Change\+Proxy\+Target interface
+\item added docs to I\+Change\+Proxy\+Target methods
+\item Fixed D\+Y\+N\+P\+R\+O\+X\+Y-\/\+I\+S\+S\+U\+E-\/108 -\/ Obtaining replicated custom attributes on proxy may fail when property setter throws exception on default value
+\item Moved custom attribute replication from Custom\+Attribute\+Util to new interface -\/ I\+Attribute\+Disassembler
+\item Exposed I\+Attribute\+Disassembler via Proxy\+Generation\+Options, so that users can plug their implementation for some convoluted scenarios. (for Silverlight)
+\item Moved I\+Interceptor\+Selector from Dynamic Proxy to Core (I\+O\+C-\/\+I\+S\+S\+U\+E-\/156)
+\end{DoxyItemize}
+
+\subsection*{1.\+1.\+0 (2009-\/05-\/04)}
+
+
+\begin{DoxyItemize}
+\item Applied Eric Hauser\textquotesingle{}s patch fixing C\+O\+R\+E-\/\+I\+S\+S\+U\+E-\/22 \char`\"{}\+Support for environment variables in resource U\+R\+I\char`\"{}
+\item Applied Gauthier Segay\textquotesingle{}s patch fixing C\+O\+R\+E-\/\+I\+S\+S\+U\+E-\/20 \char`\"{}\+Castle.\+Core.\+Tests won\textquotesingle{}t build via nant because it use Trace\+Context without referencing System.\+Web.\+dll\char`\"{}
+\item Added simple interface to Component\+Model to make optional properties required.
+\item Applied Mark\textquotesingle{}s -- \href{mailto:mwatts42@gmail.com}{\tt mwatts42@gmail.\+com} -- patch that changes the Core to support being compiled for Silverlight 2
+\item Applied Louis De\+Jardin\textquotesingle{}s patch adding Trace\+Logger as a new logger implementation
+\item Applied Chris Bilson\textquotesingle{}s patch fixing C\+O\+R\+E-\/15 \char`\"{}\+Web\+Logger Throws When Logging Outside of an Http\+Context\char`\"{}
+\end{DoxyItemize}
+
+\subsection*{Release Candidate 3}
+
+
+\begin{DoxyItemize}
+\item Added I\+Service\+Provider\+Ex which extends I\+Service\+Provider
+\item Added Pair$<$\+T,\+S$>$ class.
+\item Applied Bill Pierce\textquotesingle{}s patch fixing C\+O\+R\+E-\/9 \char`\"{}\+Allow Castle\+Component Attribute to Specify Lifestyle in Constructor\char`\"{}
+\item Added Use\+Single\+Interface\+Proxy to Compoment\+Model to control the proxying behavior while maintaining backward compatibility. Added the corresponding Component\+Proxy\+Behavior\+Attribute.
+\item Made Null\+Logger and I\+Extneded\+Logger
+\item Enabled a new format on I\+Logger interface, with 6 overloads for each method\+:
+\begin{DoxyItemize}
+\item Debug(string)
+\item Debug(string, Exception)
+\item Debug(string, params object\mbox{[}$\,$\mbox{]})
+\item Debug\+Format(string, params object\mbox{[}$\,$\mbox{]})
+\item Debug\+Format(\+Exception, string, params object\mbox{[}$\,$\mbox{]})
+\item Debug\+Format(\+I\+Format\+Provider, string, params object\mbox{[}$\,$\mbox{]})
+\item Debug\+Format(\+I\+Format\+Provider, Exception, string, params object\mbox{[}$\,$\mbox{]})
+\item The \char`\"{}\+Fatal\+Error\char`\"{} overloads where marked as \mbox{[}Obsolete\mbox{]}, replaced by \char`\"{}\+Fatal\char`\"{} and \char`\"{}\+Fatal\+Format\char`\"{}.
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection*{0.\+0.\+1.\+0}
+
+
+\begin{DoxyItemize}
+\item Included I\+Proxy\+Target\+Accessor
+\item Removed I\+Method\+Interceptor and I\+Method\+Invocation, that have been replaced by I\+Interceptor and I\+Invocation
+\item Added Find\+By\+Property\+Info to Property\+Set\+Collection
+\item Made the Dependency\+Model.\+Is\+Optional property writable
+\item Applied Curtis Schlak\textquotesingle{}s patch fixing I\+O\+C-\/27 \char`\"{}assembly resource format only works for resources where the assemblies name and default namespace are the same.\char`\"{}
+
+Quoting\+:
+
+"I chose to preserve backwards compatibility by implementing the code in the reverse order as suggested by the reporter. Given the following U\+RI for a resource\+:
+
+assembly\+://my.cool.\+assembly/context/moo/file.xml
+
+It will initially look for an embedded resource with the manifest name of \char`\"{}my.\+cool.\+assembly.\+context.\+moo.\+file.\+xml\char`\"{} in the loaded assembly my.\+cool.\+assembly.\+dll. If it does not find it, then it looks for the embedded resource with the manifest name of \char`\"{}context.\+moo.\+file.\+xml\char`\"{}.
+\item I\+Service\+Enabled\+Component Introduced to be used across the project as a standard way to have access to common services, for example, logger factories
+\item Added missing log factories
+\item Refactor Stream\+Logger and Diagnostic\+Logger to be more consistent behavior-\/wise
+\item Refactored Web\+Logger to extend Level\+Filtered\+Logger (removed duplication)
+\item Refactored Logger\+Level order
+\item Project started 
+\end{DoxyItemize}

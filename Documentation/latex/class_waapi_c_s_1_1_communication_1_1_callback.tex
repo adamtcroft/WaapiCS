@@ -1,0 +1,132 @@
+\hypertarget{class_waapi_c_s_1_1_communication_1_1_callback}{}\section{Waapi\+C\+S.\+Communication.\+Callback Class Reference}
+\label{class_waapi_c_s_1_1_communication_1_1_callback}\index{Waapi\+C\+S.\+Communication.\+Callback@{Waapi\+C\+S.\+Communication.\+Callback}}
+
+
+The callback for one-\/off events.  
+
+
+Inheritance diagram for Waapi\+C\+S.\+Communication.\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_waapi_c_s_1_1_communication_1_1_callback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_callback_a4b5984e205bd38b0be0d0d843c0681d1}{Callback}} (\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_packet}{Packet}} packet)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the one-\/off \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_callback}{Callback}} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_callback_a5730b33a0a1c0c0b169ad231cf8257ce}{Result$<$ T\+Message $>$}} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, Result\+Details details, T\+Message\mbox{[}$\,$\mbox{]} arguments, I\+Dictionary$<$ string, T\+Message $>$ arguments\+Keywords)
+\begin{DoxyCompactList}\small\item\em The results returned from Wwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_a1e2f97ef1ee7e5bfa21f30b2362678a8}\label{class_waapi_c_s_1_1_communication_1_1_callback_a1e2f97ef1ee7e5bfa21f30b2362678a8}} 
+void {\bfseries Error$<$ T\+Message $>$} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, T\+Message details, string error, T\+Message\mbox{[}$\,$\mbox{]} arguments, T\+Message arguments\+Keywords)
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_aedf34dc2bcc4d45dc742473f3814ec17}\label{class_waapi_c_s_1_1_communication_1_1_callback_aedf34dc2bcc4d45dc742473f3814ec17}} 
+void {\bfseries Error$<$ T\+Message $>$} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, T\+Message details, string error)
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_a5649933064eb98a515c982829beb59a1}\label{class_waapi_c_s_1_1_communication_1_1_callback_a5649933064eb98a515c982829beb59a1}} 
+void {\bfseries Error$<$ T\+Message $>$} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, T\+Message details, string error, T\+Message\mbox{[}$\,$\mbox{]} arguments)
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_a2e1a0432452602251f1ec942b6825d32}\label{class_waapi_c_s_1_1_communication_1_1_callback_a2e1a0432452602251f1ec942b6825d32}} 
+void {\bfseries Result$<$ T\+Message $>$} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, Result\+Details details)
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_a2a4b9894773dfe3cf61c472ef23c0eee}\label{class_waapi_c_s_1_1_communication_1_1_callback_a2a4b9894773dfe3cf61c472ef23c0eee}} 
+void {\bfseries Result$<$ T\+Message $>$} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, Result\+Details details, T\+Message\mbox{[}$\,$\mbox{]} arguments)
+\item 
+void \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_callback_ae47f6b5427e0641933b4e144854fa2fe}{Set\+Reset\+Event\+Queue}} ()
+\begin{DoxyCompactList}\small\item\em Sets and then Resets the event\+Queue \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_packet}{Packet}} \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_callback_afd3dc6685a14d9535edb1bb100f8b9b9}{\+\_\+packet}}
+\begin{DoxyCompactList}\small\item\em A scoped J\+S\+ON packet instance \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The callback for one-\/off events. 
+
+\begin{DoxySeeAlso}{See also}
+Wamp\+Sharp.\+V2.\+Rpc.\+I\+Wamp\+Raw\+Rpc\+Operation\+Client\+Callback
+
+
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_a4b5984e205bd38b0be0d0d843c0681d1}\label{class_waapi_c_s_1_1_communication_1_1_callback_a4b5984e205bd38b0be0d0d843c0681d1}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}!Callback@{Callback}}
+\index{Callback@{Callback}!Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}}
+\subsubsection{\texorpdfstring{Callback()}{Callback()}}
+{\footnotesize\ttfamily Waapi\+C\+S.\+Communication.\+Callback.\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_packet}{Packet}}}]{packet }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the one-\/off \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_callback}{Callback}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & The J\+S\+ON packet.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Argument\+Null\+Exception} & \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_packet}{Packet}} given to \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_callback}{Callback}} cannot be null!\\
+\hline
+\end{DoxyExceptions}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_a5730b33a0a1c0c0b169ad231cf8257ce}\label{class_waapi_c_s_1_1_communication_1_1_callback_a5730b33a0a1c0c0b169ad231cf8257ce}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}!Result$<$ T\+Message $>$@{Result$<$ T\+Message $>$}}
+\index{Result$<$ T\+Message $>$@{Result$<$ T\+Message $>$}!Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}}
+\subsubsection{\texorpdfstring{Result$<$ T\+Message $>$()}{Result< TMessage >()}}
+{\footnotesize\ttfamily virtual void Waapi\+C\+S.\+Communication.\+Callback.\+Result$<$ T\+Message $>$ (\begin{DoxyParamCaption}\item[{I\+Wamp\+Formatter$<$ T\+Message $>$}]{formatter,  }\item[{Result\+Details}]{details,  }\item[{T\+Message \mbox{[}$\,$\mbox{]}}]{arguments,  }\item[{I\+Dictionary$<$ string, T\+Message $>$}]{arguments\+Keywords }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The results returned from Wwise. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Message} & The type of the message.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & The formatter.\\
+\hline
+{\em details} & The details.\\
+\hline
+{\em arguments} & The arguments.\\
+\hline
+{\em arguments\+Keywords} & The arguments keywords.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_ae47f6b5427e0641933b4e144854fa2fe}\label{class_waapi_c_s_1_1_communication_1_1_callback_ae47f6b5427e0641933b4e144854fa2fe}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}!Set\+Reset\+Event\+Queue@{Set\+Reset\+Event\+Queue}}
+\index{Set\+Reset\+Event\+Queue@{Set\+Reset\+Event\+Queue}!Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}}
+\subsubsection{\texorpdfstring{Set\+Reset\+Event\+Queue()}{SetResetEventQueue()}}
+{\footnotesize\ttfamily void Waapi\+C\+S.\+Communication.\+Callback.\+Set\+Reset\+Event\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets and then Resets the event\+Queue 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_callback_afd3dc6685a14d9535edb1bb100f8b9b9}\label{class_waapi_c_s_1_1_communication_1_1_callback_afd3dc6685a14d9535edb1bb100f8b9b9}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}!\+\_\+packet@{\+\_\+packet}}
+\index{\+\_\+packet@{\+\_\+packet}!Waapi\+C\+S\+::\+Communication\+::\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Callback}}
+\subsubsection{\texorpdfstring{\+\_\+packet}{\_packet}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_packet}{Packet}} Waapi\+C\+S.\+Communication.\+Callback.\+\_\+packet\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A scoped J\+S\+ON packet instance 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S.\+Communication/Callbacks.\+cs\end{DoxyCompactItemize}

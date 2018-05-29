@@ -1,0 +1,350 @@
+\hypertarget{classak_1_1wwise_1_1core_1_1_object}{}\section{ak.\+wwise.\+core.\+Object Class Reference}
+\label{classak_1_1wwise_1_1core_1_1_object}\index{ak.\+wwise.\+core.\+Object@{ak.\+wwise.\+core.\+Object}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Dictionary$<$ string, object $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_a737e01ae91795f37872b7f34e9ac747a}{Name\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em A subscriber that listens for the renaming of any node. \end{DoxyCompactList}\item 
+static Dictionary$<$ string, object $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_af766d3b435d3f33d2edc2772d7b9d492}{Create}} (string parent, string type, string name, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{Wwise\+Values.\+On\+Name\+Conflict}} on\+Name\+Conflict=Wwise\+Values.\+On\+Name\+Conflict.\+fail, string platform=null, string notes=null, string\mbox{[}$\,$\mbox{]} children=null)
+\begin{DoxyCompactList}\small\item\em Creates the specified node in Wwsise \end{DoxyCompactList}\item 
+static Dictionary$<$ string, object $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_af763dc1db56eaab3aaace67d4655194d}{Copy}} (string node, string parent, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{Wwise\+Values.\+On\+Name\+Conflict}} on\+Name\+Conflict=Wwise\+Values.\+On\+Name\+Conflict.\+fail)
+\begin{DoxyCompactList}\small\item\em Copies the specified node beneath the specified parent node. \end{DoxyCompactList}\item 
+static Dictionary$<$ string, object $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_ac29dd5adea4117df8c9eac008e030320}{Move}} (string node, string parent, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{Wwise\+Values.\+On\+Name\+Conflict}} on\+Name\+Conflict=Wwise\+Values.\+On\+Name\+Conflict.\+fail)
+\begin{DoxyCompactList}\small\item\em Moves the specified node to beneath the specified parent node. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_a689cc5e74862db22356b12c10ff3f51d}{Delete}} (string node\+ID)
+\begin{DoxyCompactList}\small\item\em Deletes the specified node. \end{DoxyCompactList}\item 
+static Dictionary$<$ string, object $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_a9f2472439a50e49b13338281159180b7}{Get\+Property\+Info}} (string property, string object\+ID=\char`\"{}\char`\"{}, int class\+ID=0)
+\begin{DoxyCompactList}\small\item\em Performs a query, returns specified data for each object in query result. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_a5308de1111e98c53825af0fb6b8384b3}{Get\+Attenuation\+Curve}} (string object\+ID, string platform\+ID, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}{Wwise\+Values.\+Curve\+Type}} curve\+Type)
+\begin{DoxyCompactList}\small\item\em Gets the specified attenuation curve for a given attenuation object. \end{DoxyCompactList}\item 
+static List$<$ Dictionary$<$ string, object $>$ $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_addb46d88bcefcb12e82a27938ad6e314}{Get\+Property\+Names}} (string node=null, int class\+ID=0)
+\begin{DoxyCompactList}\small\item\em Retrieves the status of a property. \end{DoxyCompactList}\item 
+static List$<$ Dictionary$<$ string, object $>$ $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_aeaf3f5194832011baaee49cdb752f5d1}{Get\+Types}} ()
+\begin{DoxyCompactList}\small\item\em Gets a list of all object types. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_a03d302c6095e49eb94c36c07380b876f}{Set\+Attenuation\+Curve}} (string object\+ID, string platform\+ID, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}{Wwise\+Values.\+Curve\+Type}} curve\+Type, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_ae8b620ede7bbe13a8185450675c9ca75}{Wwise\+Values.\+Curve\+Points\+Type}} points\+Type, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_curve_point}{Wwise\+Values.\+Curve\+Point}}\mbox{[}$\,$\mbox{]} curve\+Points)
+\begin{DoxyCompactList}\small\item\em Sets the specified attenuation curve for a given attenuation object. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_ac98880315f64eaa506257673c9f638e0}{Set\+Name}} (string object\+ID, string name)
+\begin{DoxyCompactList}\small\item\em Renames an object. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_ac6aa5492ac6782b4f5aa0ce445be84dc}{Set\+Notes}} (string object\+ID, string notes)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s notes. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_a485460b1349b05ddb80eee242a9f63ea}{Set\+Property}} (string object\+ID, string property, dynamic value, string platform\+ID=null)
+\begin{DoxyCompactList}\small\item\em Sets a property value of an object for a specific platform. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1_object_ad3a2457d498c4f72cec382ec45e4998f}{Set\+Reference}} (string object\+ID, string reference\+ID, string reference\+Name, string platform\+ID=null)
+\begin{DoxyCompactList}\small\item\em Sets an object\textquotesingle{}s reference value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_af763dc1db56eaab3aaace67d4655194d}\label{classak_1_1wwise_1_1core_1_1_object_af763dc1db56eaab3aaace67d4655194d}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Copy@{Copy}}
+\index{Copy@{Copy}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily static Dictionary$<$string, object$>$ ak.\+wwise.\+core.\+Object.\+Copy (\begin{DoxyParamCaption}\item[{string}]{node,  }\item[{string}]{parent,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{Wwise\+Values.\+On\+Name\+Conflict}}}]{on\+Name\+Conflict = {\ttfamily WwiseValues.OnNameConflict.fail} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Copies the specified node beneath the specified parent node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node G\+U\+ID.\\
+\hline
+{\em parent} & The parent G\+U\+ID.\\
+\hline
+{\em on\+Name\+Conflict} & What action to take on naming conflict.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns information on the moved node.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_af766d3b435d3f33d2edc2772d7b9d492}\label{classak_1_1wwise_1_1core_1_1_object_af766d3b435d3f33d2edc2772d7b9d492}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Create@{Create}}
+\index{Create@{Create}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static Dictionary$<$string, object$>$ ak.\+wwise.\+core.\+Object.\+Create (\begin{DoxyParamCaption}\item[{string}]{parent,  }\item[{string}]{type,  }\item[{string}]{name,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{Wwise\+Values.\+On\+Name\+Conflict}}}]{on\+Name\+Conflict = {\ttfamily WwiseValues.OnNameConflict.fail},  }\item[{string}]{platform = {\ttfamily null},  }\item[{string}]{notes = {\ttfamily null},  }\item[{string \mbox{[}$\,$\mbox{]}}]{children = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates the specified node in Wwsise 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The G\+U\+ID or path of the parent to the new object.\\
+\hline
+{\em type} & The type of the new object. See Wwise Objects Reference at audiokinetic.\+com\\
+\hline
+{\em name} & The name of the new object.\\
+\hline
+{\em on\+Name\+Conflict} & The action to take on a name conflict.\\
+\hline
+{\em platform} & The G\+U\+ID or path of the platform to use. Default uses all linked platforms.\\
+\hline
+{\em notes} & Notes to add to the object.\\
+\hline
+{\em children} & A list of child objects to be created below the new object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_a689cc5e74862db22356b12c10ff3f51d}\label{classak_1_1wwise_1_1core_1_1_object_a689cc5e74862db22356b12c10ff3f51d}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Delete@{Delete}}
+\index{Delete@{Delete}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+Object.\+Delete (\begin{DoxyParamCaption}\item[{string}]{node\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Deletes the specified node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node G\+U\+ID.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_a5308de1111e98c53825af0fb6b8384b3}\label{classak_1_1wwise_1_1core_1_1_object_a5308de1111e98c53825af0fb6b8384b3}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Get\+Attenuation\+Curve@{Get\+Attenuation\+Curve}}
+\index{Get\+Attenuation\+Curve@{Get\+Attenuation\+Curve}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Get\+Attenuation\+Curve()}{GetAttenuationCurve()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+Object.\+Get\+Attenuation\+Curve (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{string}]{platform\+ID,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}{Wwise\+Values.\+Curve\+Type}}}]{curve\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the specified attenuation curve for a given attenuation object. 
+
+\+: Needs Testing
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of attenuation object.\\
+\hline
+{\em platform\+ID} & The ID (G\+U\+ID) or path of the platform to get curves. Set to null-\/guid for unlinked reference.\\
+\hline
+{\em curve\+Type} & The type of attenuation curve.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_a9f2472439a50e49b13338281159180b7}\label{classak_1_1wwise_1_1core_1_1_object_a9f2472439a50e49b13338281159180b7}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Get\+Property\+Info@{Get\+Property\+Info}}
+\index{Get\+Property\+Info@{Get\+Property\+Info}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Get\+Property\+Info()}{GetPropertyInfo()}}
+{\footnotesize\ttfamily static Dictionary$<$string, object$>$ ak.\+wwise.\+core.\+Object.\+Get\+Property\+Info (\begin{DoxyParamCaption}\item[{string}]{property,  }\item[{string}]{object\+ID = {\ttfamily \char`\"{}\char`\"{}},  }\item[{int}]{class\+ID = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Performs a query, returns specified data for each object in query result. 
+
+\+: Needs Testing
+
+
+\begin{DoxyParams}{Parameters}
+{\em get} & The query starting point.\\
+\hline
+{\em transform} & Sequential transformations on object list returned by \char`\"{}get\char`\"{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Retrieves information about an object property. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em property} & The name of the property to retrieve.\\
+\hline
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object.\\
+\hline
+{\em class\+ID} & The ID (class ID) of the object to retrieve the property from.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_addb46d88bcefcb12e82a27938ad6e314}\label{classak_1_1wwise_1_1core_1_1_object_addb46d88bcefcb12e82a27938ad6e314}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Get\+Property\+Names@{Get\+Property\+Names}}
+\index{Get\+Property\+Names@{Get\+Property\+Names}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Get\+Property\+Names()}{GetPropertyNames()}}
+{\footnotesize\ttfamily static List$<$Dictionary$<$string, object$>$ $>$ ak.\+wwise.\+core.\+Object.\+Get\+Property\+Names (\begin{DoxyParamCaption}\item[{string}]{node = {\ttfamily null},  }\item[{int}]{class\+ID = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the status of a property. 
+
+\+: Currently non-\/functioning \+: Needs Testing
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object to check.\\
+\hline
+{\em platform\+ID} & The ID (G\+U\+ID) or path of the platform to link the reference. Set to null-\/guid for unlinked reference.\\
+\hline
+{\em property} & The name of the property.\\
+\hline
+\end{DoxyParams}
+
+
+Gets the property names of the chosen node or node-\/type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The G\+U\+ID of a project node.\\
+\hline
+{\em class\+ID} & The class identifier of a node type.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_aeaf3f5194832011baaee49cdb752f5d1}\label{classak_1_1wwise_1_1core_1_1_object_aeaf3f5194832011baaee49cdb752f5d1}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Get\+Types@{Get\+Types}}
+\index{Get\+Types@{Get\+Types}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Get\+Types()}{GetTypes()}}
+{\footnotesize\ttfamily static List$<$Dictionary$<$string, object$>$ $>$ ak.\+wwise.\+core.\+Object.\+Get\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets a list of all object types. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_ac29dd5adea4117df8c9eac008e030320}\label{classak_1_1wwise_1_1core_1_1_object_ac29dd5adea4117df8c9eac008e030320}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Move@{Move}}
+\index{Move@{Move}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily static Dictionary$<$string, object$>$ ak.\+wwise.\+core.\+Object.\+Move (\begin{DoxyParamCaption}\item[{string}]{node,  }\item[{string}]{parent,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a672159d5ad63bd0a752a5607f4ad6cd9}{Wwise\+Values.\+On\+Name\+Conflict}}}]{on\+Name\+Conflict = {\ttfamily WwiseValues.OnNameConflict.fail} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Moves the specified node to beneath the specified parent node. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node G\+U\+ID.\\
+\hline
+{\em parent} & The parent G\+U\+ID.\\
+\hline
+{\em on\+Name\+Conflict} & What action to take on naming conflict.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$<$Returns information on the moved node.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_a737e01ae91795f37872b7f34e9ac747a}\label{classak_1_1wwise_1_1core_1_1_object_a737e01ae91795f37872b7f34e9ac747a}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Name\+Changed@{Name\+Changed}}
+\index{Name\+Changed@{Name\+Changed}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Name\+Changed()}{NameChanged()}}
+{\footnotesize\ttfamily static Dictionary$<$string, object$>$ ak.\+wwise.\+core.\+Object.\+Name\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A subscriber that listens for the renaming of any node. 
+
+\begin{DoxyReturn}{Returns}
+Returns details about the node that was renamed.
+\end{DoxyReturn}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_a03d302c6095e49eb94c36c07380b876f}\label{classak_1_1wwise_1_1core_1_1_object_a03d302c6095e49eb94c36c07380b876f}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Set\+Attenuation\+Curve@{Set\+Attenuation\+Curve}}
+\index{Set\+Attenuation\+Curve@{Set\+Attenuation\+Curve}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Set\+Attenuation\+Curve()}{SetAttenuationCurve()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+Object.\+Set\+Attenuation\+Curve (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{string}]{platform\+ID,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5fa07a83f99814d445c7075a3ebf4850}{Wwise\+Values.\+Curve\+Type}}}]{curve\+Type,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_ae8b620ede7bbe13a8185450675c9ca75}{Wwise\+Values.\+Curve\+Points\+Type}}}]{points\+Type,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_curve_point}{Wwise\+Values.\+Curve\+Point}} \mbox{[}$\,$\mbox{]}}]{curve\+Points }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the specified attenuation curve for a given attenuation object. 
+
+\+: Needs testing
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of attenuation object.\\
+\hline
+{\em platform\+ID} & The ID (G\+U\+ID) or path of the platform to set curves. Set to null-\/guid for unlinked curve.\\
+\hline
+{\em curve\+Type} & Type of attenuation curve.\\
+\hline
+{\em points\+Type} & Defines if the curve has no points, has its own set of points, or uses those of the Volume\+Dry\+Usage curve.\\
+\hline
+{\em curve\+Points} & An array of cure points.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_ac98880315f64eaa506257673c9f638e0}\label{classak_1_1wwise_1_1core_1_1_object_ac98880315f64eaa506257673c9f638e0}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Set\+Name@{Set\+Name}}
+\index{Set\+Name@{Set\+Name}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Set\+Name()}{SetName()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+Object.\+Set\+Name (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Renames an object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object to rename.\\
+\hline
+{\em name} & The new name of the object.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_ac6aa5492ac6782b4f5aa0ce445be84dc}\label{classak_1_1wwise_1_1core_1_1_object_ac6aa5492ac6782b4f5aa0ce445be84dc}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Set\+Notes@{Set\+Notes}}
+\index{Set\+Notes@{Set\+Notes}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Set\+Notes()}{SetNotes()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+Object.\+Set\+Notes (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{string}]{notes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the object\textquotesingle{}s notes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object to set value.\\
+\hline
+{\em notes} & The new notes of the object.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_a485460b1349b05ddb80eee242a9f63ea}\label{classak_1_1wwise_1_1core_1_1_object_a485460b1349b05ddb80eee242a9f63ea}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Set\+Property@{Set\+Property}}
+\index{Set\+Property@{Set\+Property}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Set\+Property()}{SetProperty()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+Object.\+Set\+Property (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{string}]{property,  }\item[{dynamic}]{value,  }\item[{string}]{platform\+ID = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets a property value of an object for a specific platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object to set value.\\
+\hline
+{\em property} & The name of the property.\\
+\hline
+{\em platform\+ID} & The ID (G\+U\+ID) or path of the platform.\\
+\hline
+{\em value} & The value of the object.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1_object_ad3a2457d498c4f72cec382ec45e4998f}\label{classak_1_1wwise_1_1core_1_1_object_ad3a2457d498c4f72cec382ec45e4998f}} 
+\index{ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}!Set\+Reference@{Set\+Reference}}
+\index{Set\+Reference@{Set\+Reference}!ak\+::wwise\+::core\+::\+Object@{ak\+::wwise\+::core\+::\+Object}}
+\subsubsection{\texorpdfstring{Set\+Reference()}{SetReference()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+Object.\+Set\+Reference (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{string}]{reference\+ID,  }\item[{string}]{reference\+Name,  }\item[{string}]{platform\+ID = {\ttfamily null} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets an object\textquotesingle{}s reference value. 
+
+\+: Needs testing
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object which has the reference.\\
+\hline
+{\em platform\+ID} & The ID (G\+U\+ID) or path of the platform to link the reference. Set to null-\/guid for unlinked reference.\\
+\hline
+{\em reference\+Name} & The name of the reference to set.\\
+\hline
+{\em reference\+ID} & The ID (G\+U\+ID) or path of the object to be referred to.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S/Core.\+Object.\+cs\end{DoxyCompactItemize}

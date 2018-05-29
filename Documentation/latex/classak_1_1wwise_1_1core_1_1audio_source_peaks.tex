@@ -1,0 +1,63 @@
+\hypertarget{classak_1_1wwise_1_1core_1_1audio_source_peaks}{}\section{ak.\+wwise.\+core.\+audio\+Source\+Peaks Class Reference}
+\label{classak_1_1wwise_1_1core_1_1audio_source_peaks}\index{ak.\+wwise.\+core.\+audio\+Source\+Peaks@{ak.\+wwise.\+core.\+audio\+Source\+Peaks}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1audio_source_peaks_a45c75a2d330071d850965611b84bba7b}{Get\+Min\+Max\+Peaks\+In\+Region}} (string object\+ID, float time\+From, float time\+To, float num\+Peaks, bool get\+Cross\+Channel\+Peaks)
+\begin{DoxyCompactList}\small\item\em Get the min/max peak pairs, in a given region of an audio source, as a collection of binary strings (one per channel). If get\+Cross\+Channel\+Peaks is true, there will be only one binary string representing peaks across all channels globally. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1audio_source_peaks_a6e82a3efd62537cae654061123a94c57}{Get\+Min\+Max\+Peaks\+In\+Trimmed\+Region}} (string object\+ID, float num\+Peaks, bool get\+Cross\+Channel\+Peaks)
+\begin{DoxyCompactList}\small\item\em Get the min/max peak pairs in the entire trimmed region of an audio source, for each channel, as an array of binary strings (one per channel). If get\+Cross\+Channel\+Peaks is true, there will be only one binary string representing peaks across all channels globally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1audio_source_peaks_a45c75a2d330071d850965611b84bba7b}\label{classak_1_1wwise_1_1core_1_1audio_source_peaks_a45c75a2d330071d850965611b84bba7b}} 
+\index{ak\+::wwise\+::core\+::audio\+Source\+Peaks@{ak\+::wwise\+::core\+::audio\+Source\+Peaks}!Get\+Min\+Max\+Peaks\+In\+Region@{Get\+Min\+Max\+Peaks\+In\+Region}}
+\index{Get\+Min\+Max\+Peaks\+In\+Region@{Get\+Min\+Max\+Peaks\+In\+Region}!ak\+::wwise\+::core\+::audio\+Source\+Peaks@{ak\+::wwise\+::core\+::audio\+Source\+Peaks}}
+\subsubsection{\texorpdfstring{Get\+Min\+Max\+Peaks\+In\+Region()}{GetMinMaxPeaksInRegion()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+audio\+Source\+Peaks.\+Get\+Min\+Max\+Peaks\+In\+Region (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{float}]{time\+From,  }\item[{float}]{time\+To,  }\item[{float}]{num\+Peaks,  }\item[{bool}]{get\+Cross\+Channel\+Peaks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the min/max peak pairs, in a given region of an audio source, as a collection of binary strings (one per channel). If get\+Cross\+Channel\+Peaks is true, there will be only one binary string representing peaks across all channels globally. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object.\\
+\hline
+{\em time\+From} & The start time, in seconds, of the section of the audio source for which peaks are required \\
+\hline
+{\em time\+To} & The end time, in seconds, of the section of the audio source for which peaks are required.\\
+\hline
+{\em num\+Peaks} & The number of peaks that are required.\\
+\hline
+{\em get\+Cross\+Channel\+Peaks} & When {\ttfamily true}, \mbox{[}peaks will be calculated globally across channels\mbox{]}, instead of per channel. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1audio_source_peaks_a6e82a3efd62537cae654061123a94c57}\label{classak_1_1wwise_1_1core_1_1audio_source_peaks_a6e82a3efd62537cae654061123a94c57}} 
+\index{ak\+::wwise\+::core\+::audio\+Source\+Peaks@{ak\+::wwise\+::core\+::audio\+Source\+Peaks}!Get\+Min\+Max\+Peaks\+In\+Trimmed\+Region@{Get\+Min\+Max\+Peaks\+In\+Trimmed\+Region}}
+\index{Get\+Min\+Max\+Peaks\+In\+Trimmed\+Region@{Get\+Min\+Max\+Peaks\+In\+Trimmed\+Region}!ak\+::wwise\+::core\+::audio\+Source\+Peaks@{ak\+::wwise\+::core\+::audio\+Source\+Peaks}}
+\subsubsection{\texorpdfstring{Get\+Min\+Max\+Peaks\+In\+Trimmed\+Region()}{GetMinMaxPeaksInTrimmedRegion()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+audio\+Source\+Peaks.\+Get\+Min\+Max\+Peaks\+In\+Trimmed\+Region (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{float}]{num\+Peaks,  }\item[{bool}]{get\+Cross\+Channel\+Peaks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the min/max peak pairs in the entire trimmed region of an audio source, for each channel, as an array of binary strings (one per channel). If get\+Cross\+Channel\+Peaks is true, there will be only one binary string representing peaks across all channels globally. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object.\\
+\hline
+{\em num\+Peaks} & The number of peaks that are required.\\
+\hline
+{\em get\+Cross\+Channel\+Peaks} & When {\ttfamily true}, \mbox{[}peaks will be calculated globally across channels\mbox{]}, instead of per channel. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S/Core.\+cs\end{DoxyCompactItemize}

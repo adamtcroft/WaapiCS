@@ -1,0 +1,481 @@
+\hypertarget{classak_1_1soundengine}{}\section{ak.\+soundengine Class Reference}
+\label{classak_1_1soundengine}\index{ak.\+soundengine@{ak.\+soundengine}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classak_1_1soundengine_a2290e4a649fce1091953eb400db9f313}{Post\+Event}} (string event\+G\+U\+ID, int game\+Object)
+\begin{DoxyCompactList}\small\item\em Asynchronously post an Event to the sound engine (by event ID). \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a9a535985a59833af4b6f449290f669e9}{Execute\+Action\+On\+Event}} (string event\+G\+U\+ID, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5c261935f6f77b4260dc66ddb3e56fb7}{Wwise\+Values.\+Action\+Type}} action\+Type, int game\+Object, int transition\+Duration\+In\+Ms, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}{Wwise\+Values.\+Curve\+Interpolation}} fade\+Curve)
+\begin{DoxyCompactList}\small\item\em Execute an action on all nodes that are referenced in the specified event in an action of type play. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_afd779d093ce814d15447430388a0d456}{Post\+Msg\+Monitor}} (string message)
+\begin{DoxyCompactList}\small\item\em Display a message in the profiler. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_ac1c88c689a398ecd9be070d12673ed97}{Post\+Trigger}} (string trigger\+G\+U\+ID, int game\+Object)
+\begin{DoxyCompactList}\small\item\em Post the specified Trigger. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a3fd88cbe63fb08f7e42e55cf5545d0ea}{Register\+Game\+Obj}} (int game\+Object, string name)
+\begin{DoxyCompactList}\small\item\em Register a game object. Registering a game object twice does nothing. Unregistering it once unregisters it no matter how many times it has been registered. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_afc2a12c76050e0525a056ec67add7743}{Reset\+R\+T\+P\+C\+Value}} (dynamic rtpc\+G\+U\+ID, int game\+Object)
+\begin{DoxyCompactList}\small\item\em Reset the value of a real-\/time parameter control to its default value, as specified in the Wwise project. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_aafaae28ffe765296b126b8b8e9a18d6d}{Seek\+On\+Event}} (dynamic event\+G\+U\+ID, int game\+Object, int start\+Position\+In\+Ms, float start\+Percentage, bool seek\+To\+Nearest\+Marker, int playing\+ID)
+\begin{DoxyCompactList}\small\item\em Seek inside all playing objects that are referenced in Play Actions of the specified Event. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_ae46d7ee86793631aa736ecec55614bd6}{Set\+Default\+Listeners}} (int\mbox{[}$\,$\mbox{]} listener\+I\+Ds)
+\begin{DoxyCompactList}\small\item\em Set a the default active listeners for all subsequent game objects that are registered. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_aeaf8b01fb0e562ab85f2f2d9528fefdf}{Set\+Game\+Object\+Aux\+Send\+Values}} (int game\+Object\+ID, \mbox{\hyperlink{struct_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_aux_send_values}{Wwise\+Values.\+Aux\+Send\+Values}}\mbox{[}$\,$\mbox{]} aux\+Send\+Values)
+\begin{DoxyCompactList}\small\item\em Set the Auxiliary Busses to route the specified game object. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a2a10b5eb429d069b3aa28893ec7777c9}{Set\+Game\+Object\+Output\+Bus\+Volume}} (int emitter\+ID, int listener\+ID, float control\+Value)
+\begin{DoxyCompactList}\small\item\em Set the output bus volume (direct) to be used for the specified game object. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_acafe879d3b05a9055d7d1ac87bf36b01}{Set\+Listeners}} (int emitter\+ID, int\mbox{[}$\,$\mbox{]} listener\+I\+Ds)
+\begin{DoxyCompactList}\small\item\em Set a single game object\textquotesingle{}s active listeners. By default, all new game objects have no listeners active, but this behavior can be overridden with \mbox{\hyperlink{classak_1_1soundengine_ae46d7ee86793631aa736ecec55614bd6}{Set\+Default\+Listeners()}}. Inactive listeners are not computed. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a21877b2fa86691ef3457c90eecf9928f}{Set\+Listener\+Spatialization}} (int listener\+ID, bool spatialized, int channel\+Config, float\mbox{[}$\,$\mbox{]} volume\+Offsets)
+\begin{DoxyCompactList}\small\item\em Set a listener\textquotesingle{}s spatialization parameters. This lets you define listener-\/specific volume offsets for each audio channel. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_ab41f105de15f1be1822a6541c0a1b8d8}{Set\+Multiple\+Positions}} (int game\+Object\+ID, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_position3_d}{Wwise\+Values.\+Position3D}}\mbox{[}$\,$\mbox{]} positions, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6edfb755afdda63c2168e2528fbf107a}{Wwise\+Values.\+Multi\+Position\+Type}} multi\+Position\+Type)
+\begin{DoxyCompactList}\small\item\em Set multiple positions for a single game object. Setting multiple positions for a single game object is a way to simulate multiple emission sources while using the resources of only one voice. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a0cbbaf6a6d2ef4eb93c75dc334f9bbba}{Set\+Object\+Obstruction\+And\+Occlusion}} (int emitter\+ID, int listener\+ID, float obstruction\+Level, float occlusion\+Level)
+\begin{DoxyCompactList}\small\item\em Set a game object\textquotesingle{}s obstruction and occlusion levels. This function is used to affect how an object should be heard by a specific listener. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a03eaed1fc3797d3b12e0a1f99b36b117}{Set\+Position}} (int game\+Object\+ID, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_position3_d}{Wwise\+Values.\+Position3D}} position)
+\begin{DoxyCompactList}\small\item\em Set the position of a game object. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a00e8ea0a613f12b5aac1f86d34980cdc}{Set\+R\+T\+P\+C\+Value}} (dynamic rtpc\+ID, float value, int game\+Object\+ID)
+\begin{DoxyCompactList}\small\item\em Set the value of a real-\/time parameter control. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_aee8799d8967ab5c7b37ba2c430a9c891}{Set\+Scaling\+Factor}} (int game\+Object\+ID, float attenuation\+Scaling\+Factor)
+\begin{DoxyCompactList}\small\item\em et the scaling factor of a game object. Modify the attenuation computations on this game object to simulate sounds with a larger or smaller area of effect. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_aff3bd19c1134a0ce06ef3823dbc88f86}{Set\+Switch}} (dynamic switch\+Group\+ID, dynamic switch\+State\+ID, int game\+Object\+ID)
+\begin{DoxyCompactList}\small\item\em Set the State of a Switch Group. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_ac749b4e54cee0cc5aae534f13ed4e2b5}{Stop\+All}} (int game\+Object\+ID)
+\begin{DoxyCompactList}\small\item\em Stop playing the current content associated to the specified game object ID. If no game object is specified, all sounds will be stopped. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a210eb2a2ff2fb2c7c23187df448fef5a}{Stop\+Playing\+ID}} (int playing\+ID, int transition\+Duration\+In\+Ms, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}{Wwise\+Values.\+Curve\+Interpolation}} fade\+Curve)
+\begin{DoxyCompactList}\small\item\em Stop the current content, associated to the specified playing ID, from playing. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1soundengine_a937cfbdb071456806d43b6a04292d9d3}{Unregister\+Game\+Obj}} (int game\+Object\+ID)
+\begin{DoxyCompactList}\small\item\em Unregister a game object. Registering a game object twice does nothing. Unregistering it once unregisters it no matter how many times it has been registered. Unregistering a game object while it is in use is allowed, but the control over the parameters of this game object is lost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classak_1_1soundengine_a9a535985a59833af4b6f449290f669e9}\label{classak_1_1soundengine_a9a535985a59833af4b6f449290f669e9}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Execute\+Action\+On\+Event@{Execute\+Action\+On\+Event}}
+\index{Execute\+Action\+On\+Event@{Execute\+Action\+On\+Event}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Execute\+Action\+On\+Event()}{ExecuteActionOnEvent()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Execute\+Action\+On\+Event (\begin{DoxyParamCaption}\item[{string}]{event\+G\+U\+ID,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a5c261935f6f77b4260dc66ddb3e56fb7}{Wwise\+Values.\+Action\+Type}}}]{action\+Type,  }\item[{int}]{game\+Object,  }\item[{int}]{transition\+Duration\+In\+Ms,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}{Wwise\+Values.\+Curve\+Interpolation}}}]{fade\+Curve }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Execute an action on all nodes that are referenced in the specified event in an action of type play. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+G\+U\+ID} & Either the ID (G\+U\+ID), name or short ID of the event.\\
+\hline
+{\em action\+Type} & Action to execute on all the elements that were played using the specified event.\\
+\hline
+{\em game\+Object} & Associated game object ID.\\
+\hline
+{\em transition\+Duration\+In\+Ms} & Fade duration (ms).\\
+\hline
+{\em fade\+Curve} & The fade curve type.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a2290e4a649fce1091953eb400db9f313}\label{classak_1_1soundengine_a2290e4a649fce1091953eb400db9f313}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Post\+Event@{Post\+Event}}
+\index{Post\+Event@{Post\+Event}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Post\+Event()}{PostEvent()}}
+{\footnotesize\ttfamily static int ak.\+soundengine.\+Post\+Event (\begin{DoxyParamCaption}\item[{string}]{event\+G\+U\+ID,  }\item[{int}]{game\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Asynchronously post an Event to the sound engine (by event ID). 
+
+\+: Test this
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+G\+U\+ID} & Either the ID (G\+U\+ID), name, or short ID of the Event.\\
+\hline
+{\em game\+Object} & The unique ID of the game object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classak_1_1soundengine_afd779d093ce814d15447430388a0d456}\label{classak_1_1soundengine_afd779d093ce814d15447430388a0d456}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Post\+Msg\+Monitor@{Post\+Msg\+Monitor}}
+\index{Post\+Msg\+Monitor@{Post\+Msg\+Monitor}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Post\+Msg\+Monitor()}{PostMsgMonitor()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Post\+Msg\+Monitor (\begin{DoxyParamCaption}\item[{string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Display a message in the profiler. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_ac1c88c689a398ecd9be070d12673ed97}\label{classak_1_1soundengine_ac1c88c689a398ecd9be070d12673ed97}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Post\+Trigger@{Post\+Trigger}}
+\index{Post\+Trigger@{Post\+Trigger}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Post\+Trigger()}{PostTrigger()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Post\+Trigger (\begin{DoxyParamCaption}\item[{string}]{trigger\+G\+U\+ID,  }\item[{int}]{game\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Post the specified Trigger. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em trigger\+G\+U\+ID} & Either the ID (G\+U\+ID), name, or short ID of the Trigger.\\
+\hline
+{\em game\+Object} & Associated game object ID.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a3fd88cbe63fb08f7e42e55cf5545d0ea}\label{classak_1_1soundengine_a3fd88cbe63fb08f7e42e55cf5545d0ea}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Register\+Game\+Obj@{Register\+Game\+Obj}}
+\index{Register\+Game\+Obj@{Register\+Game\+Obj}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Register\+Game\+Obj()}{RegisterGameObj()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Register\+Game\+Obj (\begin{DoxyParamCaption}\item[{int}]{game\+Object,  }\item[{string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Register a game object. Registering a game object twice does nothing. Unregistering it once unregisters it no matter how many times it has been registered. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object} & ID of the game object to be registered.\\
+\hline
+{\em name} & Name of the game object (for monitoring purpose).\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_afc2a12c76050e0525a056ec67add7743}\label{classak_1_1soundengine_afc2a12c76050e0525a056ec67add7743}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Reset\+R\+T\+P\+C\+Value@{Reset\+R\+T\+P\+C\+Value}}
+\index{Reset\+R\+T\+P\+C\+Value@{Reset\+R\+T\+P\+C\+Value}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Reset\+R\+T\+P\+C\+Value()}{ResetRTPCValue()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Reset\+R\+T\+P\+C\+Value (\begin{DoxyParamCaption}\item[{dynamic}]{rtpc\+G\+U\+ID,  }\item[{int}]{game\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reset the value of a real-\/time parameter control to its default value, as specified in the Wwise project. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtpc\+G\+U\+ID} & Either the ID (G\+U\+ID), name, or short ID of the real-\/time parameter control.\\
+\hline
+{\em game\+Object} & Associated game object ID.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_aafaae28ffe765296b126b8b8e9a18d6d}\label{classak_1_1soundengine_aafaae28ffe765296b126b8b8e9a18d6d}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Seek\+On\+Event@{Seek\+On\+Event}}
+\index{Seek\+On\+Event@{Seek\+On\+Event}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Seek\+On\+Event()}{SeekOnEvent()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Seek\+On\+Event (\begin{DoxyParamCaption}\item[{dynamic}]{event\+G\+U\+ID,  }\item[{int}]{game\+Object,  }\item[{int}]{start\+Position\+In\+Ms,  }\item[{float}]{start\+Percentage,  }\item[{bool}]{seek\+To\+Nearest\+Marker,  }\item[{int}]{playing\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Seek inside all playing objects that are referenced in Play Actions of the specified Event. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em event\+G\+U\+ID} & Either the ID (G\+U\+ID), name, or short ID of the Event.\\
+\hline
+{\em game\+Object} & Associated game object ID.\\
+\hline
+{\em start\+Position\+In\+Ms} & Desired position where playback should restart, in milliseconds.\\
+\hline
+{\em start\+Percentage} & Desired position where playback should restart, expressed in a percentage of the file\textquotesingle{}s total duration, between 0 and 1.\+f.\\
+\hline
+{\em seek\+To\+Nearest\+Marker} & If {\ttfamily true}, the \mbox{[}final seeking position will be made equal to the nearest marker\mbox{]}. \\
+\hline
+{\em playing\+ID} & Specify the playing ID for the seek to be applied to. Will result in the seek happening only on active actions of the playing ID.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_ae46d7ee86793631aa736ecec55614bd6}\label{classak_1_1soundengine_ae46d7ee86793631aa736ecec55614bd6}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Default\+Listeners@{Set\+Default\+Listeners}}
+\index{Set\+Default\+Listeners@{Set\+Default\+Listeners}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Default\+Listeners()}{SetDefaultListeners()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Default\+Listeners (\begin{DoxyParamCaption}\item[{int \mbox{[}$\,$\mbox{]}}]{listener\+I\+Ds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set a the default active listeners for all subsequent game objects that are registered. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener\+I\+Ds} & Array of listener game object I\+Ds. Game objects must have been previously registered.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_aeaf8b01fb0e562ab85f2f2d9528fefdf}\label{classak_1_1soundengine_aeaf8b01fb0e562ab85f2f2d9528fefdf}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Game\+Object\+Aux\+Send\+Values@{Set\+Game\+Object\+Aux\+Send\+Values}}
+\index{Set\+Game\+Object\+Aux\+Send\+Values@{Set\+Game\+Object\+Aux\+Send\+Values}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Game\+Object\+Aux\+Send\+Values()}{SetGameObjectAuxSendValues()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Game\+Object\+Aux\+Send\+Values (\begin{DoxyParamCaption}\item[{int}]{game\+Object\+ID,  }\item[{\mbox{\hyperlink{struct_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_aux_send_values}{Wwise\+Values.\+Aux\+Send\+Values}} \mbox{[}$\,$\mbox{]}}]{aux\+Send\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the Auxiliary Busses to route the specified game object. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object\+ID} & Associated game object ID.\\
+\hline
+{\em aux\+Send\+Values} & An array of aux send values.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a2a10b5eb429d069b3aa28893ec7777c9}\label{classak_1_1soundengine_a2a10b5eb429d069b3aa28893ec7777c9}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Game\+Object\+Output\+Bus\+Volume@{Set\+Game\+Object\+Output\+Bus\+Volume}}
+\index{Set\+Game\+Object\+Output\+Bus\+Volume@{Set\+Game\+Object\+Output\+Bus\+Volume}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Game\+Object\+Output\+Bus\+Volume()}{SetGameObjectOutputBusVolume()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Game\+Object\+Output\+Bus\+Volume (\begin{DoxyParamCaption}\item[{int}]{emitter\+ID,  }\item[{int}]{listener\+ID,  }\item[{float}]{control\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the output bus volume (direct) to be used for the specified game object. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em emitter\+ID} & Associated emitter game object ID.\\
+\hline
+{\em listener\+ID} & Associated listener game object ID.\\
+\hline
+{\em control\+Value} & A multiplier where 0 means silence and 1 means no change. Therefore, values between 0 and 1 will attenuate the sound, and values greater than 1 will amplify it.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_acafe879d3b05a9055d7d1ac87bf36b01}\label{classak_1_1soundengine_acafe879d3b05a9055d7d1ac87bf36b01}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Listeners@{Set\+Listeners}}
+\index{Set\+Listeners@{Set\+Listeners}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Listeners()}{SetListeners()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Listeners (\begin{DoxyParamCaption}\item[{int}]{emitter\+ID,  }\item[{int \mbox{[}$\,$\mbox{]}}]{listener\+I\+Ds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set a single game object\textquotesingle{}s active listeners. By default, all new game objects have no listeners active, but this behavior can be overridden with \mbox{\hyperlink{classak_1_1soundengine_ae46d7ee86793631aa736ecec55614bd6}{Set\+Default\+Listeners()}}. Inactive listeners are not computed. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em emitter\+ID} & The emitter game object ID.\\
+\hline
+{\em listener\+I\+Ds} & Array of listener game object I\+Ds. Game objects must have been previously registered.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a21877b2fa86691ef3457c90eecf9928f}\label{classak_1_1soundengine_a21877b2fa86691ef3457c90eecf9928f}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Listener\+Spatialization@{Set\+Listener\+Spatialization}}
+\index{Set\+Listener\+Spatialization@{Set\+Listener\+Spatialization}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Listener\+Spatialization()}{SetListenerSpatialization()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Listener\+Spatialization (\begin{DoxyParamCaption}\item[{int}]{listener\+ID,  }\item[{bool}]{spatialized,  }\item[{int}]{channel\+Config,  }\item[{float \mbox{[}$\,$\mbox{]}}]{volume\+Offsets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set a listener\textquotesingle{}s spatialization parameters. This lets you define listener-\/specific volume offsets for each audio channel. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener\+ID} & Listener game object ID.\\
+\hline
+{\em spatialized} & Spatialization toggle (true\+: enable spatialization, false\+: disable spatialization).\\
+\hline
+{\em channel\+Config} & Channel configuration associated with volume\+Offsets\\
+\hline
+{\em volume\+Offsets} & Per-\/speaker volume offset, in dB.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_ab41f105de15f1be1822a6541c0a1b8d8}\label{classak_1_1soundengine_ab41f105de15f1be1822a6541c0a1b8d8}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Multiple\+Positions@{Set\+Multiple\+Positions}}
+\index{Set\+Multiple\+Positions@{Set\+Multiple\+Positions}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Multiple\+Positions()}{SetMultiplePositions()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Multiple\+Positions (\begin{DoxyParamCaption}\item[{int}]{game\+Object\+ID,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_position3_d}{Wwise\+Values.\+Position3D}} \mbox{[}$\,$\mbox{]}}]{positions,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a6edfb755afdda63c2168e2528fbf107a}{Wwise\+Values.\+Multi\+Position\+Type}}}]{multi\+Position\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set multiple positions for a single game object. Setting multiple positions for a single game object is a way to simulate multiple emission sources while using the resources of only one voice. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object\+ID} & The game object identifier.\\
+\hline
+{\em positions} & Array of positions to apply.\\
+\hline
+{\em multi\+Position\+Type} & Type of the multi position.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a0cbbaf6a6d2ef4eb93c75dc334f9bbba}\label{classak_1_1soundengine_a0cbbaf6a6d2ef4eb93c75dc334f9bbba}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Object\+Obstruction\+And\+Occlusion@{Set\+Object\+Obstruction\+And\+Occlusion}}
+\index{Set\+Object\+Obstruction\+And\+Occlusion@{Set\+Object\+Obstruction\+And\+Occlusion}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Object\+Obstruction\+And\+Occlusion()}{SetObjectObstructionAndOcclusion()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Object\+Obstruction\+And\+Occlusion (\begin{DoxyParamCaption}\item[{int}]{emitter\+ID,  }\item[{int}]{listener\+ID,  }\item[{float}]{obstruction\+Level,  }\item[{float}]{occlusion\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set a game object\textquotesingle{}s obstruction and occlusion levels. This function is used to affect how an object should be heard by a specific listener. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em emitter\+ID} & The emitter game object ID.\\
+\hline
+{\em listener\+ID} & The listener game object ID.\\
+\hline
+{\em obstruction\+Level} & The obstruction level. \mbox{[}0.\+0f..1.\+0f\mbox{]}\\
+\hline
+{\em occlusion\+Level} & The occlusion level. \mbox{[}0.\+0f..1.\+0f\mbox{]}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a03eaed1fc3797d3b12e0a1f99b36b117}\label{classak_1_1soundengine_a03eaed1fc3797d3b12e0a1f99b36b117}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Position@{Set\+Position}}
+\index{Set\+Position@{Set\+Position}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Position()}{SetPosition()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Position (\begin{DoxyParamCaption}\item[{int}]{game\+Object\+ID,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_1_1_position3_d}{Wwise\+Values.\+Position3D}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the position of a game object. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object\+ID} & The game object identifier.\\
+\hline
+{\em position} & The 3D position to set for the game object.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a00e8ea0a613f12b5aac1f86d34980cdc}\label{classak_1_1soundengine_a00e8ea0a613f12b5aac1f86d34980cdc}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+R\+T\+P\+C\+Value@{Set\+R\+T\+P\+C\+Value}}
+\index{Set\+R\+T\+P\+C\+Value@{Set\+R\+T\+P\+C\+Value}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+R\+T\+P\+C\+Value()}{SetRTPCValue()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+R\+T\+P\+C\+Value (\begin{DoxyParamCaption}\item[{dynamic}]{rtpc\+ID,  }\item[{float}]{value,  }\item[{int}]{game\+Object\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the value of a real-\/time parameter control. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em rtpc\+ID} & Either the ID (G\+U\+ID), name, or short ID of the real-\/time parameter control.\\
+\hline
+{\em value} & The new value.\\
+\hline
+{\em game\+Object\+ID} & The associated game object ID.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_aee8799d8967ab5c7b37ba2c430a9c891}\label{classak_1_1soundengine_aee8799d8967ab5c7b37ba2c430a9c891}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Scaling\+Factor@{Set\+Scaling\+Factor}}
+\index{Set\+Scaling\+Factor@{Set\+Scaling\+Factor}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Scaling\+Factor()}{SetScalingFactor()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Scaling\+Factor (\begin{DoxyParamCaption}\item[{int}]{game\+Object\+ID,  }\item[{float}]{attenuation\+Scaling\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+et the scaling factor of a game object. Modify the attenuation computations on this game object to simulate sounds with a larger or smaller area of effect. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object\+ID} & The game object identifier.\\
+\hline
+{\em attenuation\+Scaling\+Factor} & The scaling factor, where 1 means 100\%, 0.\+5 means 50\%, 2 means 200\%, and so on.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_aff3bd19c1134a0ce06ef3823dbc88f86}\label{classak_1_1soundengine_aff3bd19c1134a0ce06ef3823dbc88f86}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Set\+Switch@{Set\+Switch}}
+\index{Set\+Switch@{Set\+Switch}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Set\+Switch()}{SetSwitch()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Set\+Switch (\begin{DoxyParamCaption}\item[{dynamic}]{switch\+Group\+ID,  }\item[{dynamic}]{switch\+State\+ID,  }\item[{int}]{game\+Object\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Set the State of a Switch Group. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em switch\+Group\+ID} & Either the ID (G\+U\+ID), name, or short ID of the Switch Group.\\
+\hline
+{\em switch\+State\+ID} & Either the ID (G\+U\+ID), name, or short ID of the Switch State.\\
+\hline
+{\em game\+Object\+ID} & The associated game object identifier.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_ac749b4e54cee0cc5aae534f13ed4e2b5}\label{classak_1_1soundengine_ac749b4e54cee0cc5aae534f13ed4e2b5}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Stop\+All@{Stop\+All}}
+\index{Stop\+All@{Stop\+All}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Stop\+All()}{StopAll()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Stop\+All (\begin{DoxyParamCaption}\item[{int}]{game\+Object\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stop playing the current content associated to the specified game object ID. If no game object is specified, all sounds will be stopped. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object\+ID} & The associated game object identifier.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a210eb2a2ff2fb2c7c23187df448fef5a}\label{classak_1_1soundengine_a210eb2a2ff2fb2c7c23187df448fef5a}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Stop\+Playing\+ID@{Stop\+Playing\+ID}}
+\index{Stop\+Playing\+ID@{Stop\+Playing\+ID}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Stop\+Playing\+I\+D()}{StopPlayingID()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Stop\+Playing\+ID (\begin{DoxyParamCaption}\item[{int}]{playing\+ID,  }\item[{int}]{transition\+Duration\+In\+Ms,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_a9014a599ab2b6e81b5e841de3603244d}{Wwise\+Values.\+Curve\+Interpolation}}}]{fade\+Curve }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Stop the current content, associated to the specified playing ID, from playing. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em playing\+ID} & The playing ID to be stopped.\\
+\hline
+{\em transition\+Duration\+In\+Ms} & The fade duration in ms.\\
+\hline
+{\em fade\+Curve} & The fade curve type to be used for the transition.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1soundengine_a937cfbdb071456806d43b6a04292d9d3}\label{classak_1_1soundengine_a937cfbdb071456806d43b6a04292d9d3}} 
+\index{ak\+::soundengine@{ak\+::soundengine}!Unregister\+Game\+Obj@{Unregister\+Game\+Obj}}
+\index{Unregister\+Game\+Obj@{Unregister\+Game\+Obj}!ak\+::soundengine@{ak\+::soundengine}}
+\subsubsection{\texorpdfstring{Unregister\+Game\+Obj()}{UnregisterGameObj()}}
+{\footnotesize\ttfamily static void ak.\+soundengine.\+Unregister\+Game\+Obj (\begin{DoxyParamCaption}\item[{int}]{game\+Object\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Unregister a game object. Registering a game object twice does nothing. Unregistering it once unregisters it no matter how many times it has been registered. Unregistering a game object while it is in use is allowed, but the control over the parameters of this game object is lost. 
+
+\+: Test This
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+Object\+ID} & The associated game object identifier.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S/soundengine.\+cs\end{DoxyCompactItemize}

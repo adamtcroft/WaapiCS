@@ -132,24 +132,22 @@ namespace ak
                 /// <param name="get">The query starting point.</param>
                 /// <param name="transform">Sequential transformations on object list returned by "get".</param>
                 /// <returns></returns>
-                public static Dictionary<string, object> Get(WwiseValues.Get get, WwiseValues.GetTransform transform = null)
-                {
-                    if (packet.results != null)
-                        packet.results.Clear();
-                    Dictionary<string, object> getNodes = new Dictionary<string, object>();
-                    getNodes[get.type.ToString()] = get.objectArray;
-                    packet.keywordArguments.Add("from", getNodes);
-                    if (transform != null)
-                        packet.keywordArguments.Add(transform.type.ToString(), transform.objectArray);
-                    packet.procedure = "ak.wwise.core.object.get";
-                    packet.options.@return = returnValues2017_1_0_6302;
-                    results = connection.Execute(packet);
-                    packet.Clear();
-                    return (Dictionary<string, object>)results;
-                }
+                //public static Dictionary<string, object> Get(WwiseValues.Get get, WwiseValues.GetTransform transform = null)
+                //{
+                //    if (packet.results != null)
+                //        packet.results.Clear();
+                //    Dictionary<string, object> getNodes = new Dictionary<string, object>();
+                //    getNodes[get.type.ToString()] = get.objectArray;
+                //    packet.keywordArguments.Add("from", getNodes);
+                //    if (transform != null)
+                //        packet.keywordArguments.Add(transform.type.ToString(), transform.objectArray);
+                //    packet.procedure = "ak.wwise.core.object.get";
+                //    packet.options.@return = returnValues2017_1_0_6302;
+                //    results = connection.Execute(packet);
+                //    packet.Clear();
+                //    return (Dictionary<string, object>)results;
+                //}
 
-                //TODO: Create callback
-                //!: Needs Testing
                 /// <summary>
                 /// Retrieves information about an object property.
                 /// </summary>
@@ -172,7 +170,6 @@ namespace ak
                     return (Dictionary<string, object>)results;
                 }
 
-                //TODO: Create callback
                 //!: Needs Testing
                 /// <summary>
                 /// Gets the specified attenuation curve for a given attenuation object.
@@ -188,6 +185,7 @@ namespace ak
                     packet.keywordArguments.Add("platform", platformID);
                     packet.keywordArguments.Add("curveType", curveType.ToString());
                     packet.procedure = "ak.wwise.core.object.getAttenuationCurve";
+                    packet.callback = new Callback(packet);
                     results = connection.Execute(packet);
                     packet.Clear();
                 }
@@ -200,19 +198,19 @@ namespace ak
                 /// <param name="objectID">The ID (GUID) or path of the object to check.</param>
                 /// <param name="platformID">The ID (GUID) or path of the platform to link the reference. Set to null-guid for unlinked reference.</param>
                 /// <param name="property">The name of the property.</param>
-                public static Dictionary<string, object> IsPropertyEnabled(string objectID, string platformID, string property)
-                {
-                    if (packet.results != null)
-                        packet.results.Clear();
-                    packet.keywordArguments.Add("object", objectID);
-                    packet.keywordArguments.Add("platform", platformID);
-                    packet.keywordArguments.Add("property", property);
-                    packet.procedure = "ak.wwise.core.object.isPropertyEnabled";
-                    packet.callback = new Callback(packet);
-                    results = connection.Execute(packet);
-                    packet.Clear();
-                    return (Dictionary<string, object>)results;
-                }
+                //public static Dictionary<string, object> IsPropertyEnabled(string objectID, string platformID, string property)
+                //{
+                //    if (packet.results != null)
+                //        packet.results.Clear();
+                //    packet.keywordArguments.Add("object", objectID);
+                //    packet.keywordArguments.Add("platform", platformID);
+                //    packet.keywordArguments.Add("property", property);
+                //    packet.procedure = "ak.wwise.core.object.isPropertyEnabled";
+                //    packet.callback = new Callback(packet);
+                //    results = connection.Execute(packet);
+                //    packet.Clear();
+                //    return (Dictionary<string, object>)results;
+                //}
 
                 /// <summary>
                 /// Gets the property names of the chosen node or node-type.

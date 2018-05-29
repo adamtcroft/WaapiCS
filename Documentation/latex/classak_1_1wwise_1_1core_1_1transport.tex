@@ -1,0 +1,103 @@
+\hypertarget{classak_1_1wwise_1_1core_1_1transport}{}\section{ak.\+wwise.\+core.\+transport Class Reference}
+\label{classak_1_1wwise_1_1core_1_1transport}\index{ak.\+wwise.\+core.\+transport@{ak.\+wwise.\+core.\+transport}}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ Dictionary$<$ string, object $>$ $>$ \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport_a50ec44c5163f7dccdc5da5e9a679d6d8}{Create}} (string object\+ID, int game\+Object\+ID=-\/1)
+\begin{DoxyCompactList}\small\item\em Creates a transport object for the given Wwise object. The return transport object can be used to play, stop, pause and resume the Wwise object via the other transport functions. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport_ad2da39e96d6afd24fe3fa62e638aeefe}{Destroy}} (string transport\+ID)
+\begin{DoxyCompactList}\small\item\em Destroys the given transport object. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport_a350a07341027f555a36456b64c5181b7}{Execute\+Action}} (string transport\+ID, \mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_abe08eb4038ce656dcf1f451b78a35983}{Wwise\+Values.\+transport\+Action}} transport\+Action)
+\begin{DoxyCompactList}\small\item\em Executes an action on the given transport object, or all transports if no transport is specified. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport_a1fe7ea7c0ee307919f744e6b3a573deb}{Get\+List}} ()
+\begin{DoxyCompactList}\small\item\em Returns the list of transport objects. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport_a884e837f29fa1ac8f212dd981d1a6df6}{Get\+State}} (int transport\+ID)
+\begin{DoxyCompactList}\small\item\em Gets the state of the given transport object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1transport_a50ec44c5163f7dccdc5da5e9a679d6d8}\label{classak_1_1wwise_1_1core_1_1transport_a50ec44c5163f7dccdc5da5e9a679d6d8}} 
+\index{ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}!Create@{Create}}
+\index{Create@{Create}!ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}}
+\subsubsection{\texorpdfstring{Create()}{Create()}}
+{\footnotesize\ttfamily static List$<$Dictionary$<$string, object$>$ $>$ ak.\+wwise.\+core.\+transport.\+Create (\begin{DoxyParamCaption}\item[{string}]{object\+ID,  }\item[{int}]{game\+Object\+ID = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a transport object for the given Wwise object. The return transport object can be used to play, stop, pause and resume the Wwise object via the other transport functions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+ID} & The ID (G\+U\+ID) or path of the object to control via the transport object.\\
+\hline
+{\em game\+Object\+ID} & The game object to use for playback.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1transport_ad2da39e96d6afd24fe3fa62e638aeefe}\label{classak_1_1wwise_1_1core_1_1transport_ad2da39e96d6afd24fe3fa62e638aeefe}} 
+\index{ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+transport.\+Destroy (\begin{DoxyParamCaption}\item[{string}]{transport\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Destroys the given transport object. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em transport\+ID} & Transport object ID to be used with all other \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport}{ak.\+wwise.\+core.\+transport}} functions.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1transport_a350a07341027f555a36456b64c5181b7}\label{classak_1_1wwise_1_1core_1_1transport_a350a07341027f555a36456b64c5181b7}} 
+\index{ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}!Execute\+Action@{Execute\+Action}}
+\index{Execute\+Action@{Execute\+Action}!ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}}
+\subsubsection{\texorpdfstring{Execute\+Action()}{ExecuteAction()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+transport.\+Execute\+Action (\begin{DoxyParamCaption}\item[{string}]{transport\+ID,  }\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_custom_values_1_1_wwise_values_abe08eb4038ce656dcf1f451b78a35983}{Wwise\+Values.\+transport\+Action}}}]{transport\+Action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Executes an action on the given transport object, or all transports if no transport is specified. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em transport\+ID} & Transport object ID to be used with all other \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport}{ak.\+wwise.\+core.\+transport}} functions.\\
+\hline
+{\em transport\+Action} & The action to execute. Possible values \+: \char`\"{}play\char`\"{}, \char`\"{}stop\char`\"{}, \char`\"{}pause\char`\"{}, \char`\"{}play\+Stop\char`\"{}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1transport_a1fe7ea7c0ee307919f744e6b3a573deb}\label{classak_1_1wwise_1_1core_1_1transport_a1fe7ea7c0ee307919f744e6b3a573deb}} 
+\index{ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}!Get\+List@{Get\+List}}
+\index{Get\+List@{Get\+List}!ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}}
+\subsubsection{\texorpdfstring{Get\+List()}{GetList()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+transport.\+Get\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the list of transport objects. 
+
+\+: Needs Testing! \mbox{\Hypertarget{classak_1_1wwise_1_1core_1_1transport_a884e837f29fa1ac8f212dd981d1a6df6}\label{classak_1_1wwise_1_1core_1_1transport_a884e837f29fa1ac8f212dd981d1a6df6}} 
+\index{ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}!Get\+State@{Get\+State}}
+\index{Get\+State@{Get\+State}!ak\+::wwise\+::core\+::transport@{ak\+::wwise\+::core\+::transport}}
+\subsubsection{\texorpdfstring{Get\+State()}{GetState()}}
+{\footnotesize\ttfamily static void ak.\+wwise.\+core.\+transport.\+Get\+State (\begin{DoxyParamCaption}\item[{int}]{transport\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the state of the given transport object. 
+
+\+: Needs Testing!
+
+
+\begin{DoxyParams}{Parameters}
+{\em transport\+ID} & Transport object ID to be used with all other \mbox{\hyperlink{classak_1_1wwise_1_1core_1_1transport}{ak.\+wwise.\+core.\+transport}} functions.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S/Core.\+cs\end{DoxyCompactItemize}

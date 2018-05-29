@@ -1,0 +1,90 @@
+\hypertarget{class_waapi_c_s_1_1_communication_1_1_subscription_callback}{}\section{Waapi\+C\+S.\+Communication.\+Subscription\+Callback Class Reference}
+\label{class_waapi_c_s_1_1_communication_1_1_subscription_callback}\index{Waapi\+C\+S.\+Communication.\+Subscription\+Callback@{Waapi\+C\+S.\+Communication.\+Subscription\+Callback}}
+
+
+The callback for subscribed events.  
+
+
+Inheritance diagram for Waapi\+C\+S.\+Communication.\+Subscription\+Callback\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_waapi_c_s_1_1_communication_1_1_subscription_callback}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscription_callback_ad0e9e4549d6c2893f86c5afc4a4c4b4b}{Subscription\+Callback}} (\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscriber}{Subscriber}} subscriber)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscription_callback}{Subscription\+Callback}} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscription_callback_a6cf96d1a3a3a458b8ef28b18d9aa3b4e}{Event$<$ T\+Message $>$}} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, long publication\+Id, Event\+Details details, T\+Message\mbox{[}$\,$\mbox{]} arguments, I\+Dictionary$<$ string, T\+Message $>$ arguments\+Keywords)
+\begin{DoxyCompactList}\small\item\em Occurs when an event previously subscribed to is fired in Wwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_subscription_callback_a3de5a41938f9a9bc395a1d8d6e31f125}\label{class_waapi_c_s_1_1_communication_1_1_subscription_callback_a3de5a41938f9a9bc395a1d8d6e31f125}} 
+void {\bfseries Event$<$ T\+Message $>$} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, long publication\+Id, Event\+Details details)
+\item 
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_subscription_callback_a0c02ffb8ef5229586e4a170e98c4d7df}\label{class_waapi_c_s_1_1_communication_1_1_subscription_callback_a0c02ffb8ef5229586e4a170e98c4d7df}} 
+void {\bfseries Event$<$ T\+Message $>$} (I\+Wamp\+Formatter$<$ T\+Message $>$ formatter, long publication\+Id, Event\+Details details, T\+Message\mbox{[}$\,$\mbox{]} arguments)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The callback for subscribed events. 
+
+\begin{DoxySeeAlso}{See also}
+Wamp\+Sharp.\+V2.\+Pub\+Sub.\+I\+Wamp\+Raw\+Topic\+Client\+Subscriber
+
+
+\end{DoxySeeAlso}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_subscription_callback_ad0e9e4549d6c2893f86c5afc4a4c4b4b}\label{class_waapi_c_s_1_1_communication_1_1_subscription_callback_ad0e9e4549d6c2893f86c5afc4a4c4b4b}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback}!Subscription\+Callback@{Subscription\+Callback}}
+\index{Subscription\+Callback@{Subscription\+Callback}!Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback}}
+\subsubsection{\texorpdfstring{Subscription\+Callback()}{SubscriptionCallback()}}
+{\footnotesize\ttfamily Waapi\+C\+S.\+Communication.\+Subscription\+Callback.\+Subscription\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscriber}{Subscriber}}}]{subscriber }\end{DoxyParamCaption})}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_waapi_c_s_1_1_communication_1_1_subscription_callback}{Subscription\+Callback}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em subscriber} & The subscriber.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_waapi_c_s_1_1_communication_1_1_subscription_callback_a6cf96d1a3a3a458b8ef28b18d9aa3b4e}\label{class_waapi_c_s_1_1_communication_1_1_subscription_callback_a6cf96d1a3a3a458b8ef28b18d9aa3b4e}} 
+\index{Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback}!Event$<$ T\+Message $>$@{Event$<$ T\+Message $>$}}
+\index{Event$<$ T\+Message $>$@{Event$<$ T\+Message $>$}!Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback@{Waapi\+C\+S\+::\+Communication\+::\+Subscription\+Callback}}
+\subsubsection{\texorpdfstring{Event$<$ T\+Message $>$()}{Event< TMessage >()}}
+{\footnotesize\ttfamily void Waapi\+C\+S.\+Communication.\+Subscription\+Callback.\+Event$<$ T\+Message $>$ (\begin{DoxyParamCaption}\item[{I\+Wamp\+Formatter$<$ T\+Message $>$}]{formatter,  }\item[{long}]{publication\+Id,  }\item[{Event\+Details}]{details,  }\item[{T\+Message \mbox{[}$\,$\mbox{]}}]{arguments,  }\item[{I\+Dictionary$<$ string, T\+Message $>$}]{arguments\+Keywords }\end{DoxyParamCaption})}
+
+
+
+Occurs when an event previously subscribed to is fired in Wwise. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Message} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em formatter} & A formatter that can be used to deserialize event arguments.\\
+\hline
+{\em publication\+Id} & The publication id of the incoming publication.\\
+\hline
+{\em details} & The details about this publication.\\
+\hline
+{\em arguments} & The arguments of this publication.\\
+\hline
+{\em arguments\+Keywords} & The arguments keywords of this publication.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/adamt/\+Documents/\+Git\+Hub/\+Waapi\+C\+S/\+Waapi\+C\+S.\+Communication/Callbacks.\+cs\end{DoxyCompactItemize}
