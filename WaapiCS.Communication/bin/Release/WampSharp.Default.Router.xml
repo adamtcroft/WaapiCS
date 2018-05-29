@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WampSharp.Default.Router</name>
+    </assembly>
+    <members>
+        <member name="T:WampSharp.V2.DefaultWampAuthenticationHost">
+            <summary>
+            A default implementation of <see cref="T:WampSharp.V2.WampAuthenticationHost"/> that uses
+            <see cref="T:WampSharp.Fleck.FleckWebSocketTransport"/> internally.
+            </summary>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampAuthenticationHost.#ctor(System.String,WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampAuthenticationHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="sessionAuthenticationFactory">The <see cref="T:WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory"/>
+            used to accept pending clients.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampAuthenticationHost.#ctor(System.String,WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory,WampSharp.V2.Authentication.ICookieAuthenticatorFactory,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="sessionAuthenticationFactory">The <see cref="T:WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory"/>
+            used to accept pending clients.</param>
+            <param name="cookieAuthenticatorFactory">The given <see cref="T:WampSharp.V2.Authentication.ICookieAuthenticatorFactory"/> used to authenticate
+            users given their cookies.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampAuthenticationHost.#ctor(System.String,WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory,System.Collections.Generic.IEnumerable{WampSharp.V2.Binding.IWampBinding},WampSharp.V2.Authentication.ICookieAuthenticatorFactory,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="sessionAuthenticationFactory"></param>
+            <param name="bindings">The given bindings.</param>
+            <param name="cookieAuthenticatorFactory"></param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampAuthenticationHost.#ctor(System.String,WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory,WampSharp.V2.Realm.IWampRealmContainer,WampSharp.V2.Core.IWampUriValidator,System.Collections.Generic.IEnumerable{WampSharp.V2.Binding.IWampBinding},WampSharp.V2.Authentication.ICookieAuthenticatorFactory,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="sessionAuthenticationFactory">The <see cref="T:WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory"/>
+            used to accept pending clients.</param>
+            <param name="realmContainer">The <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/> associated with this
+            host.</param>
+            <param name="uriValidator">The <see cref="T:WampSharp.V2.Core.IWampUriValidator"/> used to validate uris.</param>
+            <param name="bindings">The given bindings.</param>
+            <param name="cookieAuthenticatorFactory">The given <see cref="T:WampSharp.V2.Authentication.ICookieAuthenticatorFactory"/> used to authenticate
+            users given their cookies.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampAuthenticationHost.#ctor(System.String,WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory,WampSharp.V2.Realm.IWampRealmContainer,WampSharp.V2.Core.IWampUriValidator,System.Collections.Generic.IEnumerable{WampSharp.V2.Binding.IWampBinding},WampSharp.V2.Authentication.ICookieAuthenticatorFactory,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Func{System.Security.Authentication.SslProtocols})">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="sessionAuthenticationFactory">The <see cref="T:WampSharp.V2.Authentication.IWampSessionAuthenticatorFactory"/>
+            used to accept pending clients.</param>
+            <param name="realmContainer">The <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/> associated with this
+            host.</param>
+            <param name="uriValidator">The <see cref="T:WampSharp.V2.Core.IWampUriValidator"/> used to validate uris.</param>
+            <param name="bindings">The given bindings.</param>
+            <param name="cookieAuthenticatorFactory">The given <see cref="T:WampSharp.V2.Authentication.ICookieAuthenticatorFactory"/> used to authenticate
+            users given their cookies.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+            <param name="getEnabledSslProtocols"> If non-null, used to set Fleck's EnabledSslProtocols. </param>
+        </member>
+        <member name="T:WampSharp.V2.DefaultWampHost">
+            <summary>
+            A default implementation of <see cref="T:WampSharp.V2.WampHost"/> that uses
+            <see cref="T:WampSharp.Fleck.FleckWebSocketTransport"/> internally.
+            </summary>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampHost.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampHost.#ctor(System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampHost.#ctor(System.String,System.Collections.Generic.IEnumerable{WampSharp.V2.Binding.IWampBinding},System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="bindings">The given bindings.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampHost.#ctor(System.String,WampSharp.V2.Realm.IWampRealmContainer,WampSharp.V2.Core.IWampUriValidator,System.Collections.Generic.IEnumerable{WampSharp.V2.Binding.IWampBinding},System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="realmContainer">The given <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.</param>
+            <param name="uriValidator">The <see cref="T:WampSharp.V2.Core.IWampUriValidator"/> to use to validate uris.</param>
+            <param name="bindings">The given bindings.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.V2.DefaultWampHost.#ctor(System.String,WampSharp.V2.Realm.IWampRealmContainer,WampSharp.V2.Core.IWampUriValidator,System.Collections.Generic.IEnumerable{WampSharp.V2.Binding.IWampBinding},System.Security.Cryptography.X509Certificates.X509Certificate2,System.Func{System.Security.Authentication.SslProtocols})">
+            <summary>
+            Initializes a new instance of <see cref="T:WampSharp.V2.DefaultWampHost"/> listening at
+            the given location with the given bindings and the given
+            <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.
+            </summary>
+            <param name="location">The given location.</param>
+            <param name="realmContainer">The given <see cref="T:WampSharp.V2.Realm.IWampRealmContainer"/>.</param>
+            <param name="uriValidator">The <see cref="T:WampSharp.V2.Core.IWampUriValidator"/> to use to validate uris.</param>
+            <param name="bindings">The given bindings.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+            <param name="getEnabledSslProtocols"> If non-null, used to set Fleck's EnabledSslProtocols. </param>
+        </member>
+    </members>
+</doc>

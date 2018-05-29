@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WampSharp.Fleck</name>
+    </assembly>
+    <members>
+        <member name="T:WampSharp.Fleck.FleckWebSocketTransport">
+            <summary>
+            Represents a WebSocket transport implemented with Fleck.
+            </summary>
+        </member>
+        <member name="M:WampSharp.Fleck.FleckWebSocketTransport.#ctor(System.String,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.Fleck.FleckWebSocketTransport"/>
+            given the server address to run at.
+            </summary>
+            <param name="location">The given server address.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.Fleck.FleckWebSocketTransport.#ctor(System.String,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Func{System.Security.Authentication.SslProtocols})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.Fleck.FleckWebSocketTransport"/>
+            given the server address to run at.
+            </summary>
+            <param name="location">The given server address.</param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+            <param name="getEnabledSslProtocols"> If non-null, used to set Fleck's EnabledSslProtocols. </param>
+        </member>
+        <member name="M:WampSharp.Fleck.FleckWebSocketTransport.#ctor(System.String,WampSharp.V2.Authentication.ICookieAuthenticatorFactory,System.Security.Cryptography.X509Certificates.X509Certificate2)">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.Fleck.FleckWebSocketTransport"/>
+            given the server address to run at.
+            </summary>
+            <param name="location">The given server address.</param>
+            <param name="cookieAuthenticatorFactory"></param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+        </member>
+        <member name="M:WampSharp.Fleck.FleckWebSocketTransport.#ctor(System.String,WampSharp.V2.Authentication.ICookieAuthenticatorFactory,System.Security.Cryptography.X509Certificates.X509Certificate2,System.Func{System.Security.Authentication.SslProtocols})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.Fleck.FleckWebSocketTransport"/>
+            given the server address to run at.
+            </summary>
+            <param name="location">The given server address.</param>
+            <param name="cookieAuthenticatorFactory"></param>
+            <param name="certificate">The <see cref="T:System.Security.Cryptography.X509Certificates.X509Certificate2"/> certificate to use for secured websockets.</param>
+            <param name="getEnabledSslProtocols"> If non-null, used to set Fleck's EnabledSslProtocols. </param>
+        </member>
+    </members>
+</doc>

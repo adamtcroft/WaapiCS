@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WampSharp.NewtonsoftJson</name>
+    </assembly>
+    <members>
+        <member name="T:WampSharp.Newtonsoft.IWampMessageFormatter`1">
+            <summary>
+            Used in order to convert a JSON message to a
+            <see cref="T:WampSharp.Core.Message.WampMessage`1"/> and vice-versa.
+            </summary>
+            <typeparam name="TMessage"></typeparam>
+        </member>
+        <member name="M:WampSharp.Newtonsoft.IWampMessageFormatter`1.Parse(`0)">
+            <summary>
+            Parses a <see cref="T:WampSharp.Core.Message.WampMessage`1"/>
+            from a JSON-array.
+            </summary>
+            <param name="message">The given JSON array.</param>
+            <returns>The parsed <see cref="T:WampSharp.Core.Message.WampMessage`1"/>.</returns>
+        </member>
+        <member name="M:WampSharp.Newtonsoft.IWampMessageFormatter`1.Format(WampSharp.Core.Message.WampMessage{System.Object})">
+            <summary>
+            Converts a <see cref="T:WampSharp.Core.Message.WampMessage`1"/>
+            to a JSON-array.
+            </summary>
+            <param name="message">The given <see cref="T:WampSharp.Core.Message.WampMessage`1"/>.</param>
+            <returns>The converted JSON array</returns>
+        </member>
+        <member name="T:WampSharp.Binding.JTokenJsonBinding">
+            <summary>
+            Represents JSON binding implemented using Newtonsoft.Json.
+            </summary>
+        </member>
+        <member name="M:WampSharp.V2.Fluent.NewtonsoftJsonChannelFactoryExtensions.JsonSerialization(WampSharp.V2.Fluent.ChannelFactorySyntax.ITransportSyntax)">
+            <summary>
+            Indicates that the user wants to use JSON serialization.
+            </summary>
+        </member>
+        <member name="M:WampSharp.V2.Fluent.NewtonsoftJsonChannelFactoryExtensions.JsonSerialization(WampSharp.V2.Fluent.ChannelFactorySyntax.ITransportSyntax,Newtonsoft.Json.JsonSerializer)">
+            <summary>
+            Indicates that the user wants to use JSON serialization.
+            </summary>
+            <param name="serializer">The <see cref="T:Newtonsoft.Json.JsonSerializer"/> to serialize messages with.</param>
+        </member>
+    </members>
+</doc>

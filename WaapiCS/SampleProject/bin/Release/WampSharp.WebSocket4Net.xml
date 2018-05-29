@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WampSharp.WebSocket4Net</name>
+    </assembly>
+    <members>
+        <member name="T:WampSharp.V2.Fluent.WebSocket4NetFactory">
+            <summary>
+            A delegate that creates a new instance of a <see cref="T:WebSocket4Net.WebSocket"/>, given the subprotocol to be used.
+            </summary>
+            <param name="subprotocolName">The subprotocol to be used.</param>
+        </member>
+        <member name="M:WampSharp.V2.Fluent.WebSocket4NetChannelFactoryExtensions.WebSocketTransport(WampSharp.V2.Fluent.ChannelFactorySyntax.IRealmSyntax,System.String)">
+            <summary>
+            Indicates the user wants to use WebSocket transport and to
+            connect to a given address.
+            </summary>
+            <param name="address">The server's address.</param>
+        </member>
+        <member name="M:WampSharp.V2.Fluent.WebSocket4NetChannelFactoryExtensions.WebSocketTransport(WampSharp.V2.Fluent.ChannelFactorySyntax.IRealmSyntax,WampSharp.V2.Fluent.WebSocket4NetFactory)">
+            <summary>
+            Indicates that the user want to use WebSocket transport, using a custom
+            WebSocket4Net factory.
+            </summary>
+            <param name="factory">The custom <see cref="T:WampSharp.V2.Fluent.WebSocket4NetFactory"/> to use to create the WebSocket.</param>
+        </member>
+        <member name="T:WampSharp.WebSocket4Net.WebSocket4NetBinaryConnection`1">
+            <summary>
+            Represents a client WebSocket binary connection implemented using WebSocket4Net.
+            </summary>
+            <typeparam name="TMessage"></typeparam>
+        </member>
+        <member name="M:WampSharp.WebSocket4Net.WebSocket4NetBinaryConnection`1.#ctor(WebSocket4Net.WebSocket,WampSharp.V2.Binding.IWampBinaryBinding{`0})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.WebSocket4Net.WebSocket4NetBinaryConnection`1"/>
+            given the underlying <see cref="T:WebSocket4Net.WebSocket"/> to use and the binary binding to use.
+            </summary>
+            <param name="webSocket">The underlying <see cref="T:WebSocket4Net.WebSocket"/> to use..</param>
+            <param name="binding">The <see cref="T:WampSharp.V2.Binding.IWampTextBinding`1"/> to use.</param>
+        </member>
+        <member name="M:WampSharp.WebSocket4Net.WebSocket4NetBinaryConnection`1.#ctor(System.String,WampSharp.V2.Binding.IWampBinaryBinding{`0})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.WebSocket4Net.WebSocket4NetBinaryConnection`1"/>
+            given the server address to connect to and the binary binding to use.
+            </summary>
+            <param name="serverAddress">The server address to connect to.</param>
+            <param name="binding">The <see cref="T:WampSharp.V2.Binding.IWampBinaryBinding`1"/> to use.</param>
+        </member>
+        <member name="M:WampSharp.WebSocket4Net.WebSocket4NetBinaryConnection`1.#ctor(System.String,WampSharp.V2.Binding.IWampBinaryBinding{`0},System.Action{SuperSocket.ClientEngine.SecurityOption})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.WebSocket4Net.WebSocket4NetBinaryConnection`1"/>
+            given the server address to connect to, the binary binding to use, and an Action 
+            to configure WebSocket Security Options.
+            </summary>
+            <param name="serverAddress">The server address to connect to.</param>
+            <param name="binding">The <see cref="T:WampSharp.V2.Binding.IWampBinaryBinding`1"/> to use.</param>
+            <param name="configureSecurityOptions">If non-null, called to allow custom setup of the WebSocket security options.</param>
+        </member>
+        <member name="T:WampSharp.WebSocket4Net.WebSocket4NetTextConnection`1">
+            <summary>
+            Represents a client WebSocket text connection implemented using WebSocket4Net.
+            </summary>
+            <typeparam name="TMessage"></typeparam>
+        </member>
+        <member name="M:WampSharp.WebSocket4Net.WebSocket4NetTextConnection`1.#ctor(WebSocket4Net.WebSocket,WampSharp.V2.Binding.IWampTextBinding{`0})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.WebSocket4Net.WebSocket4NetTextConnection`1"/>
+            given the underlying <see cref="T:WebSocket4Net.WebSocket"/> to use and the text binding to use.
+            </summary>
+            <param name="webSocket">The underlying <see cref="T:WebSocket4Net.WebSocket"/> to use..</param>
+            <param name="binding">The <see cref="T:WampSharp.V2.Binding.IWampTextBinding`1"/> to use.</param>
+        </member>
+        <member name="M:WampSharp.WebSocket4Net.WebSocket4NetTextConnection`1.#ctor(System.String,WampSharp.V2.Binding.IWampTextBinding{`0})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.WebSocket4Net.WebSocket4NetTextConnection`1"/>
+            given the server address to connect to and the text binding to use.
+            </summary>
+            <param name="serverAddress">The server address to connect to.</param>
+            <param name="binding">The <see cref="T:WampSharp.V2.Binding.IWampTextBinding`1"/> to use.</param>
+        </member>
+        <member name="M:WampSharp.WebSocket4Net.WebSocket4NetTextConnection`1.#ctor(System.String,WampSharp.V2.Binding.IWampTextBinding{`0},System.Action{SuperSocket.ClientEngine.SecurityOption})">
+            <summary>
+            Creates a new instance of <see cref="T:WampSharp.WebSocket4Net.WebSocket4NetTextConnection`1"/>
+            given the server address to connect to, the text binding to use, and an Action
+            to configure WebSocket Security Options.
+            </summary>
+            <param name="serverAddress">The server address to connect to.</param>
+            <param name="binding">The <see cref="T:WampSharp.V2.Binding.IWampTextBinding`1"/> to use.</param>
+            <param name="configureSecurityOptions">If non-null, called to allow custom setup of the WebSocket security options.</param>
+        </member>
+    </members>
+</doc>
