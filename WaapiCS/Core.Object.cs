@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WaapiCS.Communication;
 using WaapiCS.CustomValues;
+using Newtonsoft.Json;
 
 namespace ak
 {
@@ -132,21 +133,25 @@ namespace ak
                 /// <param name="get">The query starting point.</param>
                 /// <param name="transform">Sequential transformations on object list returned by "get".</param>
                 /// <returns></returns>
-                //public static Dictionary<string, object> Get(WwiseValues.Get get, WwiseValues.GetTransform transform = null)
-                //{
-                //    if (packet.results != null)
-                //        packet.results.Clear();
-                //    Dictionary<string, object> getNodes = new Dictionary<string, object>();
-                //    getNodes[get.type.ToString()] = get.objectArray;
-                //    packet.keywordArguments.Add("from", getNodes);
-                //    if (transform != null)
-                //        packet.keywordArguments.Add(transform.type.ToString(), transform.objectArray);
-                //    packet.procedure = "ak.wwise.core.object.get";
-                //    packet.options.@return = returnValues2017_1_0_6302;
-                //    results = connection.Execute(packet);
-                //    packet.Clear();
-                //    return (Dictionary<string, object>)results;
-                //}
+                public static Dictionary<string, object> Get(WwiseValues.Get get, WwiseValues.GetTransform transform = null)
+                {
+                    if (packet.results != null)
+                        packet.results.Clear();
+
+                    GetWrapper wrapper = new GetWrapper();
+                    wrapper.id = get.objectArray;
+                    //wrapper.from = new Dictionary<string, object>();
+                    //wrapper.from.Add("id", wrapper.id);
+
+                    string json = JsonConvert.SerializeObject(wrapper, Formatting.Indented);
+                    packet.keywordArguments.Add("from", json);
+
+                    packet.procedure = "ak.wwise.core.object.get";
+                    packet.options.@return = returnValues2017_1_0_6302;
+                    results = connection.Execute(packet);
+                    packet.Clear();
+                    return (Dictionary<string, object>)results;
+                }
 
                 /// <summary>
                 /// Retrieves information about an object property.
@@ -363,6 +368,14 @@ namespace ak
                     packet.callback = new Callback(packet);
                     connection.Execute(packet);
                     packet.Clear();
+                }
+
+                internal class GetWrapper
+                {
+                    [JsonProperty]
+                    internal Dictionary<string, object> from { get; set; }
+                    [JsonProperty]
+                    internal string[] id { get; set; }
                 }
             }
         }
