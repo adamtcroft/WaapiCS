@@ -11,11 +11,6 @@ namespace SampleProject
     {
         static void Main(string[] args)
         {
-            WwiseValues.Get get = new WwiseValues.Get();
-            get.type = WwiseValues.getType.id;
-            get.objectArray = new string[] { "{EDD0057A-BA27-41C0-97AA-6E2DC3DB685C}" };
-            ak.wwise.core.Object.Get(get);
-
             // Hi, welcome, and thank you for downloading WaapiCS
             // Let me point out a few things...
 
@@ -30,8 +25,8 @@ namespace SampleProject
             // to create any custom objects.
 
             // Here's an example:
-            //Dictionary<string, object> results = ak.wwise.core.GetInfo();
-            //PrintResults(results);
+            Dictionary<string, object> results = ak.wwise.core.GetInfo();
+            PrintResults(results);
 
             // In the example above we call "ak.wwise.core.GetInfo()
             // This returns a Dictionary (where a string is the key and an object is the value) I named "results"
@@ -41,24 +36,24 @@ namespace SampleProject
             // Below are some more examples:
 
             // Use the "GetTypes" call
-            //List<Dictionary<string, object>> types = ak.wwise.core.Object.GetTypes();
-            //foreach (var item in types)
-            //{
-            //    foreach (var key in item.Keys)
-            //    {
-            //        Console.WriteLine("Key: " + key);
-            //        Console.WriteLine("Value: " + item[key].ToString());
-            //    }
-            //}
+            List<Dictionary<string, object>> types = ak.wwise.core.Object.GetTypes();
+            foreach (var item in types)
+            {
+                foreach (var key in item.Keys)
+                {
+                    Console.WriteLine("Key: " + key);
+                    Console.WriteLine("Value: " + item[key].ToString());
+                }
+            }
 
             // See if Wwise is remotely connected to a running game
-            //Dictionary<string, object> connectionStatus = ak.wwise.core.remote.GetConnectionStatus();
-            //PrintResults(connectionStatus);
+            Dictionary<string, object> connectionStatus = ak.wwise.core.remote.GetConnectionStatus();
+            PrintResults(connectionStatus);
 
             // Get the objects currently selected in your Wwise project
-            //List<Dictionary<string, object>> selectedObjects = ak.wwise.ui.GetSelectedObjects();
+            List<Dictionary<string, object>> selectedObjects = ak.wwise.ui.GetSelectedObjects();
 
-            // These nd much more are available to you across the entire framework!
+            // These and much more are available to you across the entire framework!
 
             // Please remember the framework is in ACTIVE development!  Some calls are untested and/or do not
             // work quite yet.  All known issues can be found on the GitHub repo under "issues".
